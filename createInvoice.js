@@ -25,7 +25,7 @@ function generateHeader(doc, invoice) {
   doc
     .image("MENS.png", 50, marginTop, { width: 200, height: 50 })
     .fillColor("#444444")
-    .fontSize(20)
+    .fontSize(14)
     .text("Invoice #:", 110, marginTop, { align: "right" })
     .text(invoice.invoiceId, 200, marginTop + 24, { align: "right" })
     .text(`Created: ${year} ${mouth} ${getDate}`, 240, marginTop + 50, {
@@ -38,7 +38,7 @@ function generateCustomerInformation(doc, invoice) {
   const marginTop = 180;
   const { firstName, lastName, email } = invoice.patient.user;
   doc
-    .fontSize(20)
+    .fontSize(14)
     .text("Mens company", 50, marginTop, { align: "left" })
     .text("Street", 50, marginTop + 20, { align: "left" })
     .text("Street", 50, marginTop + 40, { align: "left" })
@@ -53,16 +53,19 @@ function generateInvoiceTable(doc, invoice) {
   const invoiceTableTop = 300;
 
   doc.font("Helvetica-Bold");
-  generateTableHeader(doc, invoiceTableTop, "Tupe", "Name", "price");
+  generateTableHeader(doc, invoiceTableTop, "Type", "Name", "Price");
   generateHr(doc, invoiceTableTop + 35);
   doc.font("Helvetica");
 
   for (i = 0; i < invoice.calculationData.length; i++) {
     const calculationData = invoice.calculationData[i];
+    //!!!!--------------------------------------------------
+    //*Create entry
     const { type, name, sum } = calculationData;
     const position = invoiceTableTop + (i + 1) * 75;
     generateTableRow(doc, position, type, name, sum);
-    generateHr(doc, position + 45);
+    generateHr(doc, position);
+    //!!!!--------------------------------------------------
   }
   const totalPosition = invoiceTableTop + (i + 1) * 95;
 
@@ -71,15 +74,16 @@ function generateInvoiceTable(doc, invoice) {
 
 function generateTableHeader(doc, y, item, unitCost, lineTotal) {
   doc
-    .fontSize(25)
+    .fontSize(14)
     .text(item, 60, y)
     .text(unitCost, 320, y, { width: 90, align: "right" })
     .text(lineTotal, 0, y, { align: "right" });
 }
 
 function generateTableRow(doc, y, item, unitCost, lineTotal) {
+  console.log(unitCost);
   doc
-    .fontSize(17)
+    .fontSize(14)
     .text(item, 50, y - 20)
     .text(unitCost, 80, y - 20, { width: 350, align: "right" })
     .text(lineTotal, 0, y - 20, { align: "right" });
@@ -90,7 +94,7 @@ function generateHr(doc, y) {
 }
 
 function generateFooter(doc, totalPosition, invoice) {
-  doc.fontSize(30).text(`Total: $${invoice.total}`, 70, totalPosition);
+  doc.fontSize(14).text(`Total: $${invoice.total}`, 70, totalPosition);
 }
 module.exports = {
   createInvoice,

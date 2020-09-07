@@ -86,7 +86,7 @@ const invoice = {
     },
     {
       type: 'coupon',
-      name: 'Discount on subscription ($5)',
+      name: 'Discount on subscription lo ($5)',
       isNegative: true,
       sum: 5
     },
@@ -101,5 +101,4 @@ const invoice = {
   total: 64
 }
 ;
-
 createInvoice(invoice, "invoice.pdf");
