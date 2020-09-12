@@ -56,17 +56,16 @@ function generateInvoiceTable(doc, invoice) {
   generateTableHeader(doc, invoiceTableTop, "Type", "Name", "Price");
   generateHr(doc, invoiceTableTop + 35);
   doc.font("Helvetica");
-
+  //!!!!--------------------------------------------------
   for (i = 0; i < invoice.calculationData.length; i++) {
-    const calculationData = invoice.calculationData[i];
-    //!!!!--------------------------------------------------
     //*Create entry
-    const { type, name, sum } = calculationData;
-    const position = invoiceTableTop + (i + 1) * 75;
-    generateTableRow(doc, position, type, name, sum);
-    generateHr(doc, position);
-    //!!!!--------------------------------------------------
+    const { type, name, sum } = invoice.calculationData[i];
+    const positionTebel = invoiceTableTop + (i + 1) * 70;
+    generateTableRow(doc, positionTebel, type, name, sum);
+    generateHr(doc, positionTebel + 25);
   }
+  //!!!!--------------------------------------------------
+
   const totalPosition = invoiceTableTop + (i + 1) * 95;
 
   generateFooter(doc, totalPosition, invoice);
@@ -80,12 +79,15 @@ function generateTableHeader(doc, y, item, unitCost, lineTotal) {
     .text(lineTotal, 0, y, { align: "right" });
 }
 
-function generateTableRow(doc, y, item, unitCost, lineTotal) {
-  console.log(unitCost);
+function generateTableRow(doc, y, item, name, lineTotal) {
+  const str = name.replace(/[^\x20-\x7E]+/g, "");
   doc
     .fontSize(14)
     .text(item, 50, y - 20)
-    .text(unitCost, 80, y - 20, { width: 350, align: "right" })
+    .text(str, 130, y - 20, {
+      width: 300,
+      align: "right",
+    })
     .text(lineTotal, 0, y - 20, { align: "right" });
 }
 
