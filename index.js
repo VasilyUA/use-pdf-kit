@@ -52,20 +52,26 @@ const invoice = {
       type: "subscription",
       name:
         "Viagra (Generic Viagra) 1 pill 50mg.\n" +
-        "\t\t\tUse 4 times per month.\n" +
-        "\t\t\tShip every 3 month.",
+        "\t\t\t Use 4 times per month.\n" +
+        "\t\t\t Ship every 3 month.",
       sum: 72,
       isNegative: false,
     },
     {
       type: "coupon",
-      name: "Discount on subscription lo ($5)",
+      name: `Labore sit veniam occaecat sit velit minim ad elit. Ullamco veniam occaec incididunt do incididunt nulla ex esse deserunt nostrud Lorem. Excepteur officia labore aliqua sit sint pariatur exercitation elit irure cupidatat quis cupidatat excepteur dolor. Laboris nostrud commodo sunt nulla anim nulla sit. Sit dolor officia elit deserunt dolore duis duis exercitation ad minim consequat reprehenderit proident. Et ad nulla eu ex dolor reprehenderit ad adipisicing consectetur amet mollit aute deserunt.`,
       isNegative: true,
       sum: 5,
     },
     {
       type: "coupon",
-      name: "Discount on registration ($3) ",
+      name: "Eu eu enim amet tempor fugiat labore ut irure.",
+      isNegative: true,
+      sum: 3,
+    },
+    {
+      type: "coupon",
+      name: "Eu eu enim amet tempor fugiat labore ut irure.",
       isNegative: true,
       sum: 3,
     },
