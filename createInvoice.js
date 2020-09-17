@@ -63,7 +63,6 @@ function generateTable(doc, invoice, positions) {
     const rowHeight =
       font * 2 * lineHeight * Math.ceil(name.length / maxPixelWith);
     positions.push(rowHeight + positions[i]);
-
     if (positions[i] > totalHeight) {
       positions[i] = 100;
       positions[i + 1] = positions[i] + rowHeight;
