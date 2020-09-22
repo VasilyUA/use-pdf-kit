@@ -114,8 +114,8 @@ class PDFService {
 		this.doc
 			.fontSize(this.font)
 			.font('Times-Roman')
-			.text(name, 160, y - 20, {
-				width: 340,
+			.text(name, 170, y - 20, {
+				width: 320,
 				align: 'left',
 				characterSpacing: this.lineHeight - 0.1,
 				lineBreak: false,
