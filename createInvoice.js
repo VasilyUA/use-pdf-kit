@@ -1,119 +1,145 @@
-const fs = require("fs");
-const PDFDocument = require("pdfkit");
-const font = 14;
-const lineHeight = 1;
-const maxPixelWith = 60;
-const totalHeight = 754;
+const fs = require('fs');
 
-function createInvoice(invoice, path) {
-  let doc = new PDFDocument({
-    size: "A4",
-    margin: { top: 50, left: 100, right: 50, bottom: 50 },
-  });
+class PDFService {
+	constructor(doc, data) {
+		this.doc = doc;
+		this.data = data;
+		this.font = 14;
+		this.lineHeight = 1;
+		this.maxPixelWith = 60;
+		this.totalHeight = 754;
+	}
 
-  generateHeader(doc, invoice);
-  generateCustomerInformation(doc, invoice);
-  generateInvoiceTable(doc, invoice);
+	createInvoice(path) {
+		this.generateHeader();
+		this.generateCustomerInformation();
+		this.generateInvoiceTable();
 
-  doc.end();
-  doc.pipe(fs.createWriteStream(path));
-}
+		this.doc.end();
+		this.doc.pipe(fs.createWriteStream(path));
+	}
 
-function generateHeader(doc, invoice) {
-  const marginTop = 55;
-  const date = new Date();
-  const year = date.getFullYear();
-  const getMonth = date.getMonth();
-  const mouth = new Intl.DateTimeFormat("en-US", { month: "long" }).format(
-    getMonth
-  );
-  const getDate = date.getDate();
+	generateHeader() {
+		const marginTop = 55;
+		const date = new Date();
+		const year = date.getFullYear();
+		const getMonth = date.getMonth();
+		const mouth = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(
+			getMonth
+		);
+		const getDate = date.getDate();
+		const { invoiceId } = this.data;
+		this.doc.image('MENS.png', 50, marginTop + 5, { width: 190, height: 40 });
 
-  doc
-    .image("MENS.png", 50, marginTop, { width: 200, height: 50 })
-    .fontSize(font)
-    .font("Times-Roman")
-    .text("Invoice #:", 110, marginTop, { align: "right" })
-    .text(invoice.invoiceId, 200, marginTop + 24, { align: "right" })
-    .text(`Created: ${year} ${mouth} ${getDate}`, 240, marginTop + 50, {
-      align: "right",
-    })
-    .moveDown();
-}
+		this.doc
+			.fontSize(this.font)
+			.font('Helvetica-Bold')
+			.text('Invoice #:', 337, marginTop + 10)
+			.text(`Created:`, 370, marginTop + 30);
 
-function generateCustomerInformation(doc, invoice) {
-  const marginTop = 180;
-  const { firstName, lastName, email } = invoice.patient.user;
-  doc
-    .fontSize(font)
-    .font("Times-Roman")
-    .text("Mens company", 70, marginTop, { align: "left" })
-    .text("Street", 70, marginTop + 20, { align: "left" })
-    .text("Street", 70, marginTop + 40, { align: "left" })
-    .text("Patient", 50, marginTop, { align: "right" })
-    .text(`${firstName} ${lastName}`, 50, marginTop + 20, { align: "right" })
-    .text(email, 50, marginTop + 40, { align: "right" })
-    .moveDown();
-}
+		this.doc
+			.fontSize(this.font)
+			.font('Times-Roman')
+			.text(invoiceId, 200, marginTop + 10, { align: 'right' })
+			.text(`${year} ${mouth} ${getDate}`, 240, marginTop + 30, {
+				align: 'right',
+			});
+		this.doc.moveDown();
+	}
 
-function generateTable(doc, invoice, positions) {
-  let i;
-  for (i = 0; i < invoice.calculationData.length; i++) {
-    const { type, name, sum } = invoice.calculationData[i];
-    const rowHeight =
-      font * 2 * lineHeight * Math.ceil(name.length / maxPixelWith);
-    positions.push(rowHeight + positions[i]);
-    if (positions[i] > totalHeight) {
-      positions[i] = 100;
-      positions[i + 1] = positions[i] + rowHeight;
-      doc.addPage();
-    }
-    generateTableRow(doc, positions[i], type, name, sum);
-    generateHr(doc, positions[i + 1] - 30);
-  }
-  generateTableFooter(doc, positions[i], invoice);
-}
+	generateCustomerInformation() {
+		const marginTop = 170;
+		const { firstName, lastName, email } = this.data.patient.user;
+		this.doc
+			.fontSize(this.font)
+			.font('Helvetica-Bold')
+			.text('Mens company:', 70, marginTop, { align: 'left' })
+			.text('Street:', 70, marginTop + 20, { align: 'left' })
+			.text('Street:', 70, marginTop + 40, { align: 'left' });
+		this.doc
+			.fontSize(this.font)
+			.font('Times-Roman')
+			.text('Patient', 50, marginTop, { align: 'right' })
+			.text(`${firstName} ${lastName}`, 50, marginTop + 20, {
+				align: 'right',
+			})
+			.text(email, 50, marginTop + 40, { align: 'right' })
+			.moveDown();
+	}
 
-function generateInvoiceTable(doc, invoice) {
-  const invoiceTableTop = 300;
-  const positions = [invoiceTableTop + 60];
-  generateTableHeader(doc, invoiceTableTop, "Type", "Name", "Price");
-  generateHr(doc, invoiceTableTop + 20);
-  generateTable(doc, invoice, positions);
-}
+	generateInvoiceTable() {
+		const invoiceTableTop = 300;
+		const positions = [invoiceTableTop + 60];
+		this.generateTableHeader(invoiceTableTop);
+		this.generateHr(invoiceTableTop + 20);
+		this.generateTable(positions);
+	}
 
-function generateTableHeader(doc, y, Type, Name, Price) {
-  doc
-    .fontSize(font)
-    .font("Times-Roman")
-    .text(Type, 70, y)
-    .text(Name, 360, y, { width: 90, align: "right" })
-    .text(Price, 0, y, { align: "right" });
-}
+	generateTableHeader(y) {
+		this.doc
+			.fontSize(this.font + 2)
+			.font('Helvetica-Bold')
+			.text('Type', 70, y)
+			.text('Name', 360, y, { width: 90, align: 'right' })
+			.text('Price', 0, y, { align: 'right' });
+	}
 
-function generateTableRow(doc, y, Type, Name, Price) {
-  const name = Name.replace(/[^\x20-\x7E]+/g, ""); // remove unicode
-  doc
-    .fontSize(font)
-    .font("Times-Roman")
-    .text(Type, 70, y - 20)
-    .text(name, 160, y - 20, {
-      width: 340,
-      align: "left",
-      characterSpacing: lineHeight - 0.1,
-      lineBreak: false,
-      lineGap: lineHeight,
-    })
-    .text(Price, 0, y - 20, { align: "right" });
-}
+	generateTable(positions) {
+		let i;
+		for (i = 0; i < this.data.calculationData.length; i++) {
+			const { type, name, sum } = this.data.calculationData[i];
+			const rowHeight =
+				this.font *
+				2 *
+				this.lineHeight *
+				Math.ceil(name.length / this.maxPixelWith);
+			positions.push(rowHeight + positions[i]);
+			if (positions[i] > this.totalHeight) {
+				positions[i] = 100;
+				positions[i + 1] = positions[i] + rowHeight;
+				this.doc.addPage();
+			}
+			this.generateTableRow(positions[i], type, name, sum);
+			this.generateHr(positions[i + 1] - 33);
+		}
+		this.generateTableFooter(positions[i]);
+	}
 
-function generateHr(doc, y) {
-  doc.strokeColor("#aaaaaa").lineWidth(1).moveTo(50, y).lineTo(550, y).stroke();
-}
+	generateTableRow(y, Type, Name, Price) {
+		const name = Name.replace(/[^\x20-\x7E]+/g, ''); // remove unicode
+		this.doc
+			.fontSize(this.font - 2)
+			.font('Helvetica-Bold')
+			.text(Type, 70, y - 20);
+		this.doc
+			.fontSize(this.font)
+			.font('Times-Roman')
+			.text(name, 160, y - 20, {
+				width: 340,
+				align: 'left',
+				characterSpacing: this.lineHeight - 0.1,
+				lineBreak: false,
+				lineGap: this.lineHeight,
+			})
+			.text(`$${Price}`, 0, y - 20, { align: 'right' });
+	}
 
-function generateTableFooter(doc, y, invoice) {
-  doc.fontSize(font).text(`Total: $${invoice.total}`, 70, y);
+	generateHr(y) {
+		this.doc
+			.strokeColor('#aaaaaa')
+			.lineWidth(1)
+			.moveTo(50, y)
+			.lineTo(550, y)
+			.stroke();
+	}
+
+	generateTableFooter(y) {
+		this.doc
+			.fontSize(this.font)
+			.font('Helvetica-Bold')
+			.text(`Total: $${this.data.total}`, 70, y);
+	}
 }
 module.exports = {
-  createInvoice,
+	PDFService,
 };
