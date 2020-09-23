@@ -15,21 +15,10 @@ class PDFService {
 	createInvoice(path) {
 		this.generateHeader();
 		this.generateCustomerInformation();
-		this.generateHeaderStyle();
 		this.generateInvoiceTable();
 
 		this.doc.end();
 		this.doc.pipe(fs.createWriteStream(path));
-	}
-
-	generateHeaderStyle() {
-		this.doc
-			.strokeColor('#aaaaaa')
-			.lineWidth(30)
-			.lineCap('butt')
-			.moveTo(50, 305)
-			.lineTo(550, 305)
-			.stroke();
 	}
 
 	generateHeader() {
@@ -91,11 +80,11 @@ class PDFService {
 
 	generateTableHeader(y) {
 		this.doc
-			.fontSize(this.fontSize + 2)
+			.fontSize(this.fontSize + 4)
 			.font('Helvetica-Bold')
 			.text('Type', 70, y)
 			.text('Name', 250, y, { width: 90, align: 'center' })
-			.text('Price', 484, y, { align: 'right' });
+			.text('Price', 479, y, { align: 'right' });
 	}
 
 	generateTable(positions) {
@@ -121,21 +110,27 @@ class PDFService {
 
 	generateTableRow(y, Type, Name, Price) {
 		const name = Name.replace(/[^\x20-\x7E]+/g, '');
-		this.doc
-			.fontSize(this.fontSize - 2)
+		const type = Type[0].toUpperCase() + Type.slice(1);
+		const prise = type === 'Coupon' ? `-$${Price}` : `$${Price}`;
+		const { doc } = this;
+		doc
+			.fontSize(this.fontSize)
 			.font('Helvetica-Bold')
-			.text(Type, 50, y - 20);
-		this.doc
+			.text(type, 50, y - 20);
+		doc
 			.fontSize(this.fontSize)
 			.font(this.font)
-			.text(name, 138, y - 20, {
-				width: 330,
+			.text(name, 150, y - 20, {
+				width: 315,
 				align: 'justify',
 				characterSpacing: this.lineHeight - 0.6,
 				lineBreak: false,
 				lineGap: this.lineHeight,
-			})
-			.text(`$${Price}`, 0, y - 20, { align: 'right' });
+			});
+		doc
+			.fontSize(this.fontSize + 2)
+			.font('Helvetica-Bold')
+			.text(prise, 0, y - 20, { align: 'right' });
 	}
 
 	generateHr(y) {
@@ -146,16 +141,22 @@ class PDFService {
 			.lineTo(550, y)
 			.stroke();
 		this.doc
+			.strokeColor('#000000')
 			.lineWidth(1)
-			.lineJoin('round')
-			.rect(127, 320, 350, y - this.verticalLine)
-			.stroke()
-			.strokeColor('#000000');
+			.moveTo(140, y)
+			.lineTo(140, 320)
+			.stroke();
+		this.doc
+			.strokeColor('#000000')
+			.lineWidth(1)
+			.moveTo(470, y)
+			.lineTo(470, 320)
+			.stroke();
 	}
 
 	generateTableFooter(y) {
 		this.doc
-			.fontSize(this.fontSize)
+			.fontSize(this.fontSize + 4)
 			.font('Helvetica-Bold')
 			.text(`Total: $${this.data.total}`, 70, y);
 	}

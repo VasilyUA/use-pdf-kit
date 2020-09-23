@@ -105,18 +105,6 @@ const data = {
 			isNegative: true,
 			sum: 3,
 		},
-		{
-			type: 'coupon',
-			name: 'Eu eu enim amet tempor fugiat labore ut irure.',
-			isNegative: true,
-			sum: 3,
-		},
-		{
-			type: 'coupon',
-			name: 'Eu eu enim amet tempor fugiat labore ut irure.',
-			isNegative: true,
-			sum: 3,
-		},
 	],
 	invoiceId: 'kacdgaf2wpkacdgaf3',
 	total: 64,
