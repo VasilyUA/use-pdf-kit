@@ -83,15 +83,15 @@ const data = {
 		},
 		{
 			type: 'coupon',
-			name: `Ladatat excepteur dolor. Laboris nostrud commodo sunt nulla anim nulla sit. Sit dolor officia elit deserunt dolore duis duis exercitation ad minim consequat reprehenderit proident. Et ad nulla eu ex dolor reprehenderit ad adipisicing consectetur amet mollit aute deserunt.`,
+			name: 'Eu eu enim amet tempor fugiat labore ut irure.',
 			isNegative: true,
-			sum: 5,
+			sum: 3,
 		},
 		{
 			type: 'coupon',
-			name: `Ladatat excepteur dolor. Laboris nostrud commodo sunt nulla anim nulla sit. Sit dolor officia elit deserunt dolore duis duis exercitation ad minim consequat reprehenderit proident. Et ad nulla eu ex dolor reprehenderit ad adipisicing consectetur amet mollit aute deserunt.`,
+			name: 'Eu eu enim amet tempor fugiat labore ut irure.',
 			isNegative: true,
-			sum: 5,
+			sum: 3,
 		},
 		{
 			type: 'coupon',
@@ -107,9 +107,15 @@ const data = {
 		},
 		{
 			type: 'coupon',
-			name: `Ladatat excepteur dolor. Laboris nostrud commodo sunt nulla anim nulla sit. Sit dolor officia elit deserunt dolore duis duis exercitation ad minim consequat reprehenderit proident. Et ad nulla eu ex dolor reprehenderit ad adipisicing consectetur amet mollit aute deserunt.`,
+			name: 'Eu eu enim amet tempor fugiat labore ut irure.',
 			isNegative: true,
-			sum: 5,
+			sum: 3,
+		},
+		{
+			type: 'coupon',
+			name: 'Eu eu enim amet tempor fugiat labore ut irure.',
+			isNegative: true,
+			sum: 3,
 		},
 	],
 	invoiceId: 'kacdgaf2wpkacdgaf3',
