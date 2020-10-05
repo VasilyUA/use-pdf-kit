@@ -1,4 +1,3 @@
-const { log } = require('console');
 const fs = require('fs');
 
 class PDFService {
@@ -26,18 +25,21 @@ class PDFService {
 		const date = new Date();
 		const year = date.getFullYear();
 		const getMonth = date.getMonth();
-		const mouth = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(
-			getMonth
-		);
+		const mouth = new Intl.DateTimeFormat('en-US', {
+			month: 'long',
+		}).format(getMonth);
 		const getDate = date.getDate();
 		const { invoiceId } = this.data;
-		this.doc.image('MENS.png', 50, marginTop + 5, { width: 240, height: 70 });
+		this.doc.image('MENS.png', 50, marginTop + 5, {
+			width: 240,
+			height: 70,
+		});
 
 		this.doc
 			.fontSize(this.fontSize)
 			.font('Helvetica-Bold')
 			.text('Invoice #:', 325, marginTop + 10)
-			.text(`Created:`, 359, marginTop + 30);
+			.text(`Creatad:`, 369, marginTop + 30);
 
 		this.doc
 			.fontSize(this.fontSize)
@@ -49,15 +51,25 @@ class PDFService {
 		this.doc.moveDown();
 	}
 
+	generateHeaderStyle() {
+		this.doc
+			.strokeColor('#aaaaaa')
+			.lineWidth(30)
+			.lineCap('butt')
+			.moveTo(50, 305)
+			.lineTo(550, 305)
+			.stroke();
+	}
+
 	generateCustomerInformation() {
 		const marginTop = 170;
 		const { firstName, lastName, email } = this.data.patient.user;
 		this.doc
 			.fontSize(this.fontSize)
 			.font('Helvetica-Bold')
-			.text('Mens company:', 70, marginTop, { align: 'left' })
-			.text('Street:', 70, marginTop + 20, { align: 'left' })
-			.text('Street:', 70, marginTop + 40, { align: 'left' });
+			.text('Mens company:', 50, marginTop, { align: 'left' })
+			.text('Street:', 50, marginTop + 20, { align: 'left' })
+			.text('Street:', 50, marginTop + 40, { align: 'left' });
 		this.doc
 			.fontSize(this.fontSize)
 			.font(this.font)
@@ -71,9 +83,9 @@ class PDFService {
 
 	generateInvoiceTable() {
 		const invoiceTableTop = 300;
-		this.verticalLine = invoiceTableTop + 20;
+		this.verticalLine = invoiceTableTop + 10;
 		const positions = [invoiceTableTop + 60];
-		this.generateTableHeader(invoiceTableTop);
+		this.generateTableHeader(invoiceTableTop - 20);
 		this.generateHr(this.verticalLine);
 		this.generateTable(positions);
 	}
@@ -113,12 +125,10 @@ class PDFService {
 		const type = Type[0].toUpperCase() + Type.slice(1);
 		const prise = type === 'Coupon' ? `-$${Price}` : `$${Price}`;
 		const { doc } = this;
-		doc
-			.fontSize(this.fontSize)
+		doc.fontSize(this.fontSize)
 			.font('Helvetica-Bold')
 			.text(type, 50, y - 20);
-		doc
-			.fontSize(this.fontSize)
+		doc.fontSize(this.fontSize)
 			.font(this.font)
 			.text(name, 150, y - 20, {
 				width: 315,
@@ -127,8 +137,7 @@ class PDFService {
 				lineBreak: false,
 				lineGap: this.lineHeight,
 			});
-		doc
-			.fontSize(this.fontSize + 2)
+		doc.fontSize(this.fontSize + 2)
 			.font('Helvetica-Bold')
 			.text(prise, 0, y - 20, { align: 'right' });
 	}
@@ -139,18 +148,6 @@ class PDFService {
 			.lineWidth(1)
 			.moveTo(50, y)
 			.lineTo(550, y)
-			.stroke();
-		this.doc
-			.strokeColor('#000000')
-			.lineWidth(1)
-			.moveTo(140, y)
-			.lineTo(140, 320)
-			.stroke();
-		this.doc
-			.strokeColor('#000000')
-			.lineWidth(1)
-			.moveTo(470, y)
-			.lineTo(470, 320)
 			.stroke();
 	}
 
