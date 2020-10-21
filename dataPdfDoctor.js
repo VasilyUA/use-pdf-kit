@@ -1,15 +1,33 @@
 module.exports = data = {
 	doctor: {
+		personalEmail: 'pm+1@rivo.agency',
+		personalEmail: 'pm+1@rivo.agency',
+		personalEmail: 'pm+1@rivo.agency',
 		user: {
-			notificationPreference: { sms: true, email: false },
 			roles: ['doctor'],
 			status: 'active',
-			email: 'pm+3@HAIRLOSS365.PP.UA',
+			email: 'pm+1@menssystem.onmicrosoft.com',
+			email: 'pm+1@menssystem.onmicrosoft.com',
+			email: 'pm+1@menssystem.onmicrosoft.com',
 			firstName: 'Johnydeasds',
 			lastName: 'Diasdfp',
 		},
 	},
 	subscriptionsData: [
+		{
+			isApproved: true,
+			plan: {
+				productName: 'Generic Propecia',
+				variationName: 'Generic Propecias',
+				weight: '2.5mg',
+			},
+			patient: {
+				user: {
+					firstName: 'Hue',
+					lastName: 'Daily',
+				},
+			},
+		},
 		{
 			isApproved: true,
 			plan: {

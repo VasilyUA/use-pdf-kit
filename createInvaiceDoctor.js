@@ -8,7 +8,7 @@ class PDFService {
 		this.maxMarginLeft = 30;
 		this.maxPixelWith = 30;
 		this.totalHeight = 700;
-		this.font = 'fonts/Helvetica.ttf';
+		this.font = `${__dirname}/fonts/Helvetica.ttf`;
 	}
 
 	createInvoice(path) {
@@ -30,8 +30,8 @@ class PDFService {
 		}).format(getMonth);
 		const getDate = date.getDate();
 		this.doc.image('MENS.png', this.maxMarginLeft, marginTop + 5, {
-			width: 240,
-			height: 70,
+			width: 150,
+			height: 30,
 		});
 
 		this.doc
@@ -49,18 +49,18 @@ class PDFService {
 	}
 
 	generateCustomerInformation() {
-		const { roles, firstName, lastName, email } = this.data.doctor.user;
-		const marginTop = 230;
+		const { roles, firstName, lastName } = this.data.doctor.user;
+		const marginTop = 180;
 		this.doc
 			.fontSize(this.fontSize + 1.5)
 			.font('Helvetica-Bold')
 			.text('Mens company:', this.maxMarginLeft, marginTop, {
 				align: 'left',
 			})
-			.text('Street:', this.maxMarginLeft, marginTop + 20, {
+			.text('Doctor:', this.maxMarginLeft, marginTop + 20, {
 				align: 'left',
 			})
-			.text('Street:', this.maxMarginLeft, marginTop + 40, {
+			.text('Email:', this.maxMarginLeft, marginTop + 40, {
 				align: 'left',
 			});
 		this.doc
@@ -70,7 +70,9 @@ class PDFService {
 			.text(`${firstName} ${lastName}`, 50, marginTop + 20, {
 				align: 'right',
 			})
-			.text(email, 50, marginTop + 40, { align: 'right' })
+			.text(this.data.doctor.personalEmail, 50, marginTop + 40, {
+				align: 'right',
+			})
 			.moveDown();
 	}
 
@@ -204,7 +206,7 @@ class PDFService {
 			.strokeColor('#000000')
 			.lineWidth(1)
 			.moveTo(30, y)
-			.lineTo(569, y)
+			.lineTo(550, y)
 			.stroke();
 	}
 }

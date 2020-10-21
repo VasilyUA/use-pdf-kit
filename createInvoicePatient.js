@@ -8,7 +8,7 @@ class PDFService {
 		this.lineHeight = 1;
 		this.maxPixelWith = 50;
 		this.totalHeight = 700;
-		this.font = 'fonts/Helvetica.ttf';
+		this.font = 'Helvetica';
 	}
 
 	createInvoice(path) {
@@ -30,9 +30,9 @@ class PDFService {
 		}).format(getMonth);
 		const getDate = date.getDate();
 		const { invoiceId } = this.data;
-		this.doc.image('MENS.png', 50, marginTop + 5, {
-			width: 240,
-			height: 70,
+		this.doc.image('imeges/MENS.png', 50, marginTop + 5, { 
+			width: 200,
+			height: 40,
 		});
 
 		this.doc
@@ -94,7 +94,7 @@ class PDFService {
 		this.doc
 			.fontSize(this.fontSize + 4)
 			.font('Helvetica-Bold')
-			.text('Type', 70, y)
+			.text('Type', 60, y)
 			.text('Name', 250, y, { width: 90, align: 'center' })
 			.text('Price', 479, y, { align: 'right' });
 	}
@@ -127,11 +127,11 @@ class PDFService {
 		const { doc } = this;
 		doc.fontSize(this.fontSize)
 			.font('Helvetica-Bold')
-			.text(type, 50, y - 20);
+			.text(type, 60, y - 20);
 		doc.fontSize(this.fontSize)
 			.font(this.font)
-			.text(name, 150, y - 20, {
-				width: 315,
+			.text(name, 159, y - 20, {
+				width: 305,
 				align: 'justify',
 				characterSpacing: this.lineHeight - 0.6,
 				lineBreak: false,
@@ -147,7 +147,7 @@ class PDFService {
 			.strokeColor('#000000')
 			.lineWidth(1)
 			.moveTo(50, y)
-			.lineTo(550, y)
+			.lineTo(540, y)
 			.stroke();
 	}
 
@@ -155,7 +155,7 @@ class PDFService {
 		this.doc
 			.fontSize(this.fontSize + 4)
 			.font('Helvetica-Bold')
-			.text(`Total: $${this.data.total}`, 70, y);
+			.text(`Total: $${this.data.total}`, 440, y);
 	}
 }
 module.exports = {
