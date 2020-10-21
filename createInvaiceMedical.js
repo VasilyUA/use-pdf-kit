@@ -14,6 +14,7 @@ class PDFService {
 	createInvoice(path) {
 		this.generateHeader();
 		this.generateCustomerInformation();
+		this.generateNotesInformation();
 
 		this.doc.end();
 		this.doc.pipe(fs.createWriteStream(path));
@@ -30,8 +31,8 @@ class PDFService {
 		const getDate = date.getDate();
 		const { invoiceId } = this.data;
 		this.doc.image('imeges/MENS.png', 50, marginTop, {
-			width: 60,
-			height: 15,
+			width: 90,
+			height: 20,
 		});
 
 		this.doc
@@ -52,8 +53,8 @@ class PDFService {
 	generateCustomerInformation() {
 		const marginTop = 50;
 		const x = 148;
-		const maxHeight = 65;
-		const customerY = 15;
+		const maxHeight = 67;
+		const customerY = 17;
 		const {
 			user: { email, firstName, lastName, phone },
 			basic: { gender, birthDate },
@@ -82,12 +83,12 @@ class PDFService {
 		this.doc
 			.fontSize(this.fontSize)
 			.font('Helvetica-Bold')
-			.text('Information:', x, marginTop)
-			.text('Patient', 50, marginTop, { align: 'right' })
+			.text('Information:', x, marginTop + 4)
+			.text('Patient', 50, marginTop + 4, { align: 'right' })
 			.strokeColor('#000000')
 			.lineWidth(1)
-			.moveTo(145, marginTop + 15)
-			.lineTo(525, marginTop + 15)
+			.moveTo(145, marginTop + 18)
+			.lineTo(525, marginTop + 18)
 			.stroke();
 
 		this.doc
@@ -112,7 +113,7 @@ class PDFService {
 			.text('Email:', x, marginTop + (90 + customerY), {
 				align: 'left',
 			})
-			.text('Dose spot Id:', x, marginTop + (105 + customerY), {
+			.text('Dose spot ID:', x, marginTop + (105 + customerY), {
 				align: 'left',
 			});
 
@@ -142,6 +143,21 @@ class PDFService {
 				align: 'right',
 			})
 			.moveDown();
+
+		this.doc
+			.strokeColor('#000000')
+			.lineWidth(1)
+			.moveTo(50, marginTop + (128 + customerY))
+			.lineTo(540, marginTop + (128 + customerY))
+			.stroke();
+	}
+
+	generateNotesInformation() {
+		const marginTop = 210;
+		this.doc
+			.fontSize(this.fontSize + 3)
+			.font('Helvetica-Bold')
+			.text(`Notes`, 50, marginTop);
 	}
 }
 module.exports = {
