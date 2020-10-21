@@ -1,0 +1,408 @@
+{
+	"patient": {
+		"basic": {
+			"gender": "male",
+			"birthDate": "1970-12-12"
+		},
+		"photo": {
+			"IDPhotoUrl": "us-west-2:2068966f-aa63-4f19-b6e7-b4fc2975deb1/IDPhoto",
+			"selfiePhoto": "us-west-2:2068966f-aa63-4f19-b6e7-b4fc2975deb1/selfiePhoto"
+		},
+		"prescribeSystem": {
+			"doseSpotId": 16230372
+		},
+		"user": {
+			"email": "vtapko001@bk.ru",
+			"firstName": "test1",
+			"lastName": "test2",
+			"phone": "+1 (212) 558 9988"
+		}
+	},
+	"notes": [
+		{
+			"text": "One note",
+			"createdAt": "2020-09-21T12:31:41.066Z"
+		}
+	],
+	"subscriptions": [
+		{
+			"plan": {
+				"frequencyOfDelivery": 1,
+				"productId": "5e2863287ddfef275848af81",
+				"productName": "Cialis",
+				"variationId": "5e2863287ddfef275848af82",
+				"variationName": "Generic Cialis",
+				"doseId": "5e2863287ddfef275848af85",
+				"frequencyOfReception": 30,
+				"firstFrequencyOfReception": 30,
+				"substance": "Tadalafil",
+				"productImgUrl": "https://static-info.s3-us-west-2.amazonaws.com/site-content/cialis.png",
+				"variationDescription": "As needed",
+				"price": 330
+			},
+			"historyId": "5f48bf93e8fec5122e55aed7",
+			"status": "active",
+			"isApproved": true,
+
+			"productType": "ed",
+			"questionnaire": [
+				{
+					"type": "text",
+					"flagged": false,
+					"flaggedReason": "",
+					"answers": [
+						{
+							"_id": "5f48c487e8fec5122e55aee7",
+							"text": "123",
+							"additionalField": "",
+							"answerId": ""
+						}
+					],
+					"_id": "5f48c487e8fec5122e55aee6",
+					"questionId": "5e3552a08f6122219022a1d5",
+					"question": "What symptoms of hair loss have you noticed?"
+				},
+				{
+					"type": "boolean",
+					"flagged": true,
+					"flaggedReason": "Answer is missing",
+					"answers": [
+						{
+							"_id": "5f48c488e8fec5122e55aeee",
+							"text": "false",
+							"additionalField": "",
+							"answerId": ""
+						}
+					],
+					"_id": "5f48c488e8fec5122e55aeed",
+					"questionId": "5e3552a08f6122219022a198",
+					"question": "Have you taken a blood pressure reading at a medical facility within the last 6 months?"
+				},
+				{
+					"type": "radio",
+					"flagged": false,
+					"flaggedReason": "",
+					"answers": [
+						{
+							"_id": "5f48c489e8fec5122e55aef7",
+							"text": "I can always get an erection but sometimes can't maintain it",
+							"additionalField": "",
+							"answerId": "5e3552a08f6122219022a19f"
+						}
+					],
+					"_id": "5f48c489e8fec5122e55aef6",
+					"questionId": "5e3552a08f6122219022a19b",
+					"question": "Do you have any problems getting or maintaining an erection during sex or masturbation?111111"
+				},
+				{
+					"type": "pressureInput",
+					"flagged": false,
+					"flaggedReason": "",
+					"answers": [
+						{
+							"_id": "5f48c48fe8fec5122e55af02",
+							"text": "120/80",
+							"additionalField": "",
+							"answerId": ""
+						}
+					],
+					"_id": "5f48c48fe8fec5122e55af01",
+					"questionId": "5e3552a08f6122219022a19a",
+					"question": "What was the result of your latest blood pressure reading?"
+				},
+				{
+					"type": "booleanTrueInput",
+					"flagged": false,
+					"flaggedReason": "",
+					"answers": [
+						{
+							"_id": "5f48c490e8fec5122e55af0f",
+							"text": "false",
+							"additionalField": "",
+							"answerId": ""
+						}
+					],
+					"_id": "5f48c490e8fec5122e55af0e",
+					"questionId": "5e3552a08f6122219022a1e0",
+					"question": "Do you currently take any medicines, herbals, or supplements?"
+				},
+				{
+					"type": "booleanTrueInput",
+					"flagged": false,
+					"flaggedReason": "",
+					"answers": [
+						{
+							"_id": "5f48c491e8fec5122e55af1e",
+							"text": "false",
+							"additionalField": "",
+							"answerId": ""
+						}
+					],
+					"_id": "5f48c491e8fec5122e55af1d",
+					"questionId": "5e3552a08f6122219022a1b2",
+					"question": "Do you take, or have you ever taken, prescription erectile dysfunction (ED) drugs or supplements? "
+				},
+				{
+					"type": "booleanTrueInput",
+					"flagged": false,
+					"flaggedReason": "",
+					"answers": [
+						{
+							"_id": "5f48c492e8fec5122e55af2f",
+							"text": "false",
+							"additionalField": "",
+							"answerId": ""
+						}
+					],
+					"_id": "5f48c492e8fec5122e55af2e",
+					"questionId": "5e3552a08f6122219022a1b4",
+					"question": "Have you had any sexual problems or any changes in sexual desire? "
+				},
+				{
+					"type": "booleanTrueInput",
+					"flagged": false,
+					"flaggedReason": "",
+					"answers": [
+						{
+							"_id": "5f48c492e8fec5122e55af42",
+							"text": "false",
+							"additionalField": "",
+							"answerId": ""
+						}
+					],
+					"_id": "5f48c492e8fec5122e55af41",
+					"questionId": "5e3552a08f6122219022a1b5",
+					"question": "Are you anxious, depressed or under stress? Any relationship or sexual problems with your partner? "
+				},
+				{
+					"type": "booleanTrueInput",
+					"flagged": false,
+					"flaggedReason": "",
+					"answers": [
+						{
+							"_id": "5f48c493e8fec5122e55af57",
+							"text": "false",
+							"additionalField": "",
+							"answerId": ""
+						}
+					],
+					"_id": "5f48c493e8fec5122e55af56",
+					"questionId": "5e3552a08f6122219022a1b7",
+					"question": "Do you have any medical conditions?"
+				},
+				{
+					"type": "booleanTrueInput",
+					"flagged": false,
+					"flaggedReason": "",
+					"answers": [
+						{
+							"_id": "5f48c495e8fec5122e55af6e",
+							"text": "false",
+							"additionalField": "",
+							"answerId": ""
+						}
+					],
+					"_id": "5f48c495e8fec5122e55af6d",
+					"questionId": "5e3552a08f6122219022a1b9",
+					"question": "Have you ever had any surgeries or hospitalizations? "
+				},
+				{
+					"type": "booleanTrueInput",
+					"flagged": false,
+					"flaggedReason": "",
+					"answers": [
+						{
+							"_id": "5f48c496e8fec5122e55af87",
+							"text": "false",
+							"additionalField": "",
+							"answerId": ""
+						}
+					],
+					"_id": "5f48c496e8fec5122e55af86",
+					"questionId": "5e3552a08f6122219022a1ba",
+					"question": "Do you take nitroglycerine, any nitrate medication, any blood pressure medication, medication for prostate enlargement, or any medication for HIV/AIDS? "
+				},
+				{
+					"type": "booleanTrueInput",
+					"flagged": false,
+					"flaggedReason": "",
+					"answers": [
+						{
+							"_id": "5f48c497e8fec5122e55afa2",
+							"text": "false",
+							"additionalField": "",
+							"answerId": ""
+						}
+					],
+					"_id": "5f48c497e8fec5122e55afa1",
+					"questionId": "5e3552a08f6122219022a1bc",
+					"question": "Do you currently take any prescription medications for a mental health condition or do you get psychological counseling?  "
+				},
+				{
+					"type": "booleanTrueInput",
+					"flagged": false,
+					"flaggedReason": "",
+					"answers": [
+						{
+							"_id": "5f48c498e8fec5122e55afbf",
+							"text": "false",
+							"additionalField": "",
+							"answerId": ""
+						}
+					],
+					"_id": "5f48c498e8fec5122e55afbe",
+					"questionId": "5e3552a08f6122219022a1c0",
+					"question": "Do you smoke or use other tobacco products? "
+				},
+				{
+					"type": "booleanTrueInput",
+					"flagged": false,
+					"flaggedReason": "",
+					"answers": [
+						{
+							"_id": "5f48c499e8fec5122e55afde",
+							"text": "false",
+							"additionalField": "",
+							"answerId": ""
+						}
+					],
+					"_id": "5f48c499e8fec5122e55afdd",
+					"questionId": "5e3552a08f6122219022a1c2",
+					"question": "Do you consume alcohol regularly or more than 1-2 drinks on an occasional basis? "
+				},
+				{
+					"type": "booleanTrueInput",
+					"flagged": false,
+					"flaggedReason": "",
+					"answers": [
+						{
+							"_id": "5f48c499e8fec5122e55afff",
+							"text": "false",
+							"additionalField": "",
+							"answerId": ""
+						}
+					],
+					"_id": "5f48c499e8fec5122e55affe",
+					"questionId": "5e3552a08f6122219022a1be",
+					"question": "Do you have any allergies or medication reactions?"
+				},
+				{
+					"type": "boolean",
+					"flagged": true,
+					"flaggedReason": "Answer is missing",
+					"answers": [
+						{
+							"_id": "5f48c49ae8fec5122e55b022",
+							"text": "false",
+							"additionalField": "",
+							"answerId": ""
+						}
+					],
+					"_id": "5f48c49ae8fec5122e55b021",
+					"questionId": "5ecbc3b48187b3738e4e4705",
+					"question": "Have you taken a blood pressure reading at a medical facility within the last 6 months?"
+				},
+				{
+					"type": "check",
+					"flagged": false,
+					"flaggedReason": "",
+					"answers": [
+						{
+							"_id": "5f48c49ee8fec5122e55b047",
+							"text": "2",
+							"additionalField": "",
+							"answerId": "5f43915c11fcc472c6f891b2"
+						}
+					],
+					"_id": "5f48c49ee8fec5122e55b046",
+					"questionId": "5f43915c11fcc472c6f891b0",
+					"question": "Do?"
+				},
+				{
+					"type": "check",
+					"flagged": true,
+					"flaggedReason": "23; ",
+					"answers": [
+						{
+							"_id": "5f48c49fe8fec5122e55b06e",
+							"text": "23",
+							"additionalField": "",
+							"answerId": "5f43942f11fcc472c6f891b5"
+						}
+					],
+					"_id": "5f48c49fe8fec5122e55b06d",
+					"questionId": "5f43942f11fcc472c6f891b3",
+					"question": "Qqqqq"
+				},
+				{
+					"type": "check",
+					"flagged": false,
+					"flaggedReason": "",
+					"answers": [
+						{
+							"_id": "5f48c4a1e8fec5122e55b097",
+							"text": "23",
+							"additionalField": "",
+							"answerId": "5f43949511fcc472c6f891b8"
+						}
+					],
+					"_id": "5f48c4a1e8fec5122e55b096",
+					"questionId": "5f43949511fcc472c6f891b6",
+					"question": "qqqqqqqqq"
+				},
+				{
+					"type": "check",
+					"flagged": false,
+					"flaggedReason": "",
+					"answers": [
+						{
+							"_id": "5f48c4a2e8fec5122e55b0c2",
+							"additionalField": "",
+							"answerId": "5f439b7f11fcc472c6f891bd"
+						}
+					],
+					"_id": "5f48c4a2e8fec5122e55b0c1",
+					"questionId": "5f439b7411fcc472c6f891b9",
+					"question": "1qqqqqqqqqqq"
+				},
+				{
+					"type": "booleanTrueInput",
+					"flagged": false,
+					"flaggedReason": "",
+					"answers": [
+						{
+							"_id": "5f48c4a4e8fec5122e55b0ef",
+							"text": "false",
+							"additionalField": "",
+							"answerId": ""
+						}
+					],
+					"_id": "5f48c4a4e8fec5122e55b0ee",
+					"questionId": "5e3552a08f6122219022a1c6",
+					"question": "Do you experience shortness of breath or chest pains during or after mild physical activity? "
+				},
+				{
+					"type": "booleanTrueInput",
+					"flagged": false,
+					"flaggedReason": "",
+					"answers": [
+						{
+							"_id": "5f48c4a4e8fec5122e55b11e",
+							"text": "false",
+							"additionalField": "",
+							"answerId": ""
+						}
+					],
+					"_id": "5f48c4a4e8fec5122e55b11d",
+					"questionId": "5e3552a08f6122219022a1ce",
+					"question": "Do you have any other comments or questions for the doctor?"
+				}
+			],
+
+			"registrationDoneDate": "2020-08-28T08:48:28.937Z",
+			"approvedDate": "2020-09-15T10:49:07.328Z",
+			"expiredAt": "2021-09-15T10:49:07.328Z",
+			"nextPeriodStart": "2020-09-15T10:49:07.328Z"
+		}
+	]
+}
