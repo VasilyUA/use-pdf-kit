@@ -406,7 +406,7 @@ class PDFService {
         }
     }
 
-    generateQuestionnaire(questionnaire) {
+    generategit(questionnaire) {
         this.marginTop = 265;
         const positions = [this.marginTop + 50];
         let index;

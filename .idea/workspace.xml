@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b842b5db-ae3d-42e2-8ace-34ce2bfd44c5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/createInvaiceMedical.js" beforeDir="false" afterPath="$PROJECT_DIR$/createInvaiceMedical.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +47,7 @@
       <updated>1603713023452</updated>
       <workItem from="1603713024612" duration="2008000" />
       <workItem from="1603715270419" duration="5349000" />
-      <workItem from="1603726243591" duration="1015000" />
+      <workItem from="1603726243591" duration="2893000" />
     </task>
     <servers />
   </component>
@@ -72,16 +71,5 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2543" y="239" width="672" height="678" key="search.everywhere.popup/74.27.1846.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603717949962" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/createInvaiceMedical.js</url>
-          <line>24</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
