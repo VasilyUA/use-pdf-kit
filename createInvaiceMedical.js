@@ -7,9 +7,8 @@ class PDFService {
         this.fontSize = 14;
         this.lineHeight = 0.9;
         this.maxPixelWith = 65;
-        this.maxHeight;
         this.totalHeight = 700;
-        this.marginTop;
+        this.marginTop = 15;
         this.font = 'Helvetica';
     }
 
@@ -23,7 +22,6 @@ class PDFService {
     }
 
     generateHeader() {
-        this.marginTop = 15;
         const date = new Date();
         const year = date.getFullYear();
         const mouth = new Intl.DateTimeFormat('en-US', {
@@ -39,7 +37,7 @@ class PDFService {
         this.doc
             .fontSize(this.fontSize)
             .font('Helvetica-Bold')
-            .text(`Creatad:`, 355, this.marginTop + 5);
+            .text(`Created:`, 355, this.marginTop + 5);
 
         this.doc
             .fontSize(this.fontSize)
@@ -48,13 +46,13 @@ class PDFService {
             .text(`${year} ${mouth} ${getDate}`, 240, this.marginTop + 5, {
                 align: 'right',
             });
-        // ! Iformation
+        // ! Information
         this.marginTop = 60;
         const x = 170;
         const maxHeight = 120;
         const customerY = 13;
         const {
-            user: {email, firstName, lastName, phone, photo},
+            user: {email, firstName, lastName, phone},
             basic: {gender, birthDate},
             prescribeSystem: {doseSpotId},
         } = this.data.patient;
@@ -195,15 +193,16 @@ class PDFService {
             }
             this.doc
                 .fontSize(this.fontSize - 3)
+                .font("Helvetica-Bold").text(`${i + 1}) ${'Note:'.slice(0, 'Note:'.length)}`, 65, positions[i] )
                 .font(this.font)
-                .text(`Note: ${text.slice(0, text.length)} \n\n`, 90, positions[i], {
-                    width: 405,
+                .text(`${text.slice(0, text.length)} \n\n`, 110, positions[i], {
+                    width: 395,
                     align: 'justify',
                     characterSpacing: this.lineHeight - 0.1,
                     lineBreak: false,
                     lineGap: this.lineHeight,
                 }).font("Helvetica-Bold").text(
-                `Create: ${year} ${mouth} ${getDate}`, 346);
+                `Create: ${year} ${mouth} ${getDate}`, 365);
             this.doc.moveDown();
 
             this.generateHr(positions[i + 1] - 10);
@@ -220,7 +219,6 @@ class PDFService {
             this.marginTop = 75;
             this.doc.addPage();
             const {
-                historyId,
                 productType,
                 isApproved,
                 questionnaire,
@@ -329,12 +327,12 @@ class PDFService {
                 .text('Product type:', x, this.marginTop + 50, {
                     align: 'left',
                 });
-            let statuse = status[0].toUpperCase() + status.slice(1);
+            let statuses = status[0].toUpperCase() + status.slice(1);
             // Plan value
             this.doc
                 .fontSize(this.fontSize - 2)
                 .font(this.font)
-                .text(statuse, x, this.marginTop + 20, {
+                .text(statuses, x, this.marginTop + 20, {
                     align: 'right',
                 })
                 .text(isApproved ? "Approved" : "Declined", x, this.marginTop + 35, {
@@ -400,7 +398,7 @@ class PDFService {
     }
 
     generateQuestionnaire(questionnaire) {
-        this.marginTop = 255;
+        this.marginTop = 245;
         const positions = [this.marginTop + 50];
         let index;
         let Height;
@@ -413,53 +411,44 @@ class PDFService {
                 this.generateHeight(question),
                 this.generateHeight(answer)
             );
-
-            positions.push(positions[index] + rowHeight);
+            positions.push(positions[index] + (rowHeight * 1.2));
             if (positions[index] > this.totalHeight) {
-                positions[index] = 20;
-                positions[index + 1] = positions[index] + rowHeight;
+                positions[index] = 50;
+                positions[index + 1] = positions[index] + rowHeight + 5;
                 this.doc.addPage();
             }
             this.doc
-                .fontSize(this.fontSize - 2)
+                .fontSize(this.fontSize - 2).font(this.font).text(`${index + 1})`, 50,  positions[index])
+                .font("Helvetica-Bold").text(`${'Question:'.slice(0, 'Question:'.length)}`,
+                75,
+                positions[index])
                 .font(this.font)
-                .text(
-                    `Question: ${question}`,
-                    // `Question: ${question} \n\nType: ${type}     Flagged: ${flagged}`,
-                    60,
-                    positions[index],
-                    {
-                        align: 'justify',
-                        width: 220,
-                    }
-                )
-                .text(`Answer: ${answer === "false" ? "No" : answer}`, 300, positions[index], {
+                .text(`${question}`,
+                    140,
+                    positions[index],{
+                align: 'justify',
+                    width: 365,
+            });
+            const maxHeight = positions[index] + (rowHeight / 1.7);
+            this.doc.font("Helvetica-Bold").text(`${'Answer:'.slice(0, 'Answer:'.length)}`, 75, rowHeight > 28 ? maxHeight : positions[index] + 15 ).font(this.font)
+                .text(`${answer === "false" ? "No" : answer}`, 140, rowHeight > 28 ? maxHeight : positions[index] + 15 , {
                     align: 'justify',
-                    width: 220,
+                    width: 365,
                 });
-            this.doc
-                .strokeColor('#000000')
-                .lineWidth(1)
-                .moveTo(290, positions[index] - 10)
-                .lineTo(290, positions[index + 1] - 5)
-                .stroke();
-            this.generateHr(positions[index + 1] - 5); //!Line
-            Height = positions[index + 1] - 5;
+
+            this.generateHr(positions[index + 1] - 4); //!Line
+            Height = positions[index + 1] - 4;
         }
+
         return Height;
     }
 
-    generateHeight(parms) {
-        const rowHeight =
-            (this.fontSize + 5) *
-            2 *
-            this.lineHeight *
-            Math.ceil(parms.length / this.maxPixelWith);
-        return rowHeight;
+    generateHeight(params) {
+        return this.fontSize * 2 * this.lineHeight * Math.ceil(params.length / this.maxPixelWith);
     }
 
-    getDate(parms) {
-        const date = new Date(parms);
+    getDate(params) {
+        const date = new Date(params);
         const year = date.getFullYear();
         const mouth = new Intl.DateTimeFormat('en-US', {
             month: 'long',

@@ -1,865 +1,385 @@
 {
-	"patient": {
-		"basic": {
-			"gender": "male",
-			"birthDate": "1970-12-12"
-		},
-		"photo": {
-			"IDPhotoUrl": "us-west-2:2068966f-aa63-4f19-b6e7-b4fc2975deb1/IDPhoto",
-			"selfiePhoto": "us-west-2:2068966f-aa63-4f19-b6e7-b4fc2975deb1/selfiePhoto"
-		},
-		"prescribeSystem": {
-			"doseSpotId": 16230372
-		},
-		"user": {
-			"email": "vtapko001@bk.ru",
-			"firstName": "test1",
-			"lastName": "test2",
-			"phone": "+1 (212) 558 9988"
-		}
-	},
-	"notes": [
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		},
-		{
-			"text": "Cupidatat minim cillum Exercitation sunt Reprehenderit nostrud adiuptas non anim do eiusmod amet esse sint.exercitation amet amet sint.Aliquip minim consequat et excepteur laboris labore quis id irure.Proident labore veniam sunt fugiat tempor eu exercitation.Deserunt excepteur dolor cillum ex fugiat eiusmod in non.commodo reprehenderit deserunt cupidatat commodo occaecat.",
-			"createdAt": "2010-09-21T12:31:41.066Z"
-		}
-	],
-	"subscriptions": [
-		{
-			"plan": {
-				"frequencyOfDelivery": 1,
-				"productName": "Cialis Ea duis ex proident ipsum sint.",
-				"variationName": "Generic Cialis",
-				"frequencyOfReception": 30,
-				"firstFrequencyOfReception": 30,
-				"substance": "Tadalafil ",
-				"variationDescription": "As needed"
-			},
-			"historyId": "5f48bf93e8fec5122e55aed7",
-			"status": "active",
-			"isApproved": true,
+  "patient": {
+    "basic": {
+      "gender": "male",
+      "birthDate": "1970-12-12"
+    },
+    "photo": {
+      "IDPhotoUrl": "us-west-2:2068966f-aa63-4f19-b6e7-b4fc2975deb1/IDPhoto",
+      "selfiePhoto": "us-west-2:2068966f-aa63-4f19-b6e7-b4fc2975deb1/selfiePhoto"
+    },
+    "prescribeSystem": {
+      "doseSpotId": 16230372
+    },
+    "user": {
+      "email": "vtapko001@bk.ru",
+      "firstName": "test1",
+      "lastName": "test2",
+      "phone": "+1 (212) 558 9988"
+    }
+  },
+  "notes": [
+    {
+      "text": "Cupidatat minim cillumVoluptate duis velit quis dolor velit ad ullamco tempor Lorem veniam ad dolor est. Exercitation t.",
+      "createdAt": "2010-09-21T12:31:41.066Z"
+    }
+  ],
+  "subscriptions": [
+    {
+      "plan": {
+        "frequencyOfDelivery": 1,
+        "productName": "Cialis Ea duis ex proident ipsum sint.",
+        "variationName": "Generic Cialis",
+        "frequencyOfReception": 30,
+        "firstFrequencyOfReception": 30,
+        "substance": "Tadalafil ",
+        "variationDescription": "As needed"
+      },
+      "historyId": "5f48bf93e8fec5122e55aed7",
+      "status": "active",
+      "isApproved": true,
+      "productType": "ed",
+      "questionnaire": [
+        {
+          "type": "text",
+          "flagged": false,
+          "flaggedReason": "",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344cd",
+              "text": "ticed?What symptoms asdm? loss have you noticed?",
+              "additionalField": "",
+              "answerId": ""
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344cc",
+          "questionId": "5e3552a08f6122219022a1d5",
+          "question": "ticed?ve you s of hair iced?"
+        },       {
+          "type": "boolean",
+          "flagged": true,
+          "flaggedReason": "Answer is missing",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344cf",
+              "text": "false",
+              "additionalField": "",
+              "answerId": ""
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344ce",
+          "questionId": "5e3552a08f6122219022a198",
+          "question": "Have you taken a blood pressure reading at a medical facility within the last 6 months?"
+        },
+        {
+          "type": "radio",
+          "flagged": true,
+          "flaggedReason": "I never have problems getting or maintaining an erection",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344d1",
+              "text": "I never have problems getting or maintaining an erection",
+              "additionalField": "",
+              "answerId": "5e3552a08f6122219022a1a0"
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344d0",
+          "questionId": "5e3552a08f6122219022a19b",
+          "question": "Do you have any problems getting or maintaining an erection during sex or masturbation?111111"
+        },
+        {
+          "type": "pressureInput",
+          "flagged": false,
+          "flaggedReason": "",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344d3",
+              "text": "120/80",
+              "additionalField": "",
+              "answerId": ""
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344d2",
+          "questionId": "5e3552a08f6122219022a19a",
+          "question": "What was the result of your latest blood pressure reading?"
+        },
+        {
+          "type": "booleanTrueInput",
+          "flagged": false,
+          "flaggedReason": "",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344d5",
+              "text": "false",
+              "additionalField": "",
+              "answerId": ""
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344d4",
+          "questionId": "5e3552a08f6122219022a1e0",
+          "question": "Do you currently take any medicines, herbals, or supplements?"
+        },
+        {
+          "type": "booleanTrueInput",
+          "flagged": false,
+          "flaggedReason": "",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344d7",
+              "text": "false",
+              "additionalField": "",
+              "answerId": ""
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344d6",
+          "questionId": "5e3552a08f6122219022a1b2",
+          "question": "Do you take, or have you ever taken, prescription erectile dysfunction (ED) drugs or supplements? "
+        },
+        {
+          "type": "booleanTrueInput",
+          "flagged": false,
+          "flaggedReason": "",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344d9",
+              "text": "false",
+              "additionalField": "",
+              "answerId": ""
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344d8",
+          "questionId": "5e3552a08f6122219022a1b4",
+          "question": "Have you had any sexual problems or any changes in sexual desire? "
+        },
+        {
+          "type": "booleanTrueInput",
+          "flagged": false,
+          "flaggedReason": "",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344db",
+              "text": "false",
+              "additionalField": "",
+              "answerId": ""
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344da",
+          "questionId": "5e3552a08f6122219022a1b5",
+          "question": "Are you anxious, depressed or under stress? Any relationship or sexual problems with your partner? "
+        },
+        {
+          "type": "booleanTrueInput",
+          "flagged": false,
+          "flaggedReason": "",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344dd",
+              "text": "false",
+              "additionalField": "",
+              "answerId": ""
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344dc",
+          "questionId": "5e3552a08f6122219022a1b7",
+          "question": "Do you have any medical conditions?"
+        },
+        {
+          "type": "booleanTrueInput",
+          "flagged": false,
+          "flaggedReason": "",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344df",
+              "text": "false",
+              "additionalField": "",
+              "answerId": ""
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344de",
+          "questionId": "5e3552a08f6122219022a1b9",
+          "question": "Have you ever had any surgeries or hospitalizations? "
+        },
+        {
+          "type": "booleanTrueInput",
+          "flagged": false,
+          "flaggedReason": "",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344e1",
+              "text": "false",
+              "additionalField": "",
+              "answerId": ""
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344e0",
+          "questionId": "5e3552a08f6122219022a1ba",
+          "question": "Do you take nitroglycerine, any nitrate medication, any blood pressure medication, medication for prostate enlargement, or any medication for HIV/AIDS? "
+        },
+        {
+          "type": "booleanTrueInput",
+          "flagged": false,
+          "flaggedReason": "",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344e3",
+              "text": "false",
+              "additionalField": "",
+              "answerId": ""
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344e2",
+          "questionId": "5e3552a08f6122219022a1bc",
+          "question": "Do you currently take any prescription medications for a mental health condition or do you get psychological counseling?  "
+        },
+        {
+          "type": "booleanTrueInput",
+          "flagged": false,
+          "flaggedReason": "",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344e5",
+              "text": "false",
+              "additionalField": "",
+              "answerId": ""
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344e4",
+          "questionId": "5e3552a08f6122219022a1c0",
+          "question": "Do you smoke or use other tobacco products? "
+        },
+        {
+          "type": "booleanTrueInput",
+          "flagged": false,
+          "flaggedReason": "",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344e7",
+              "text": "false",
+              "additionalField": "",
+              "answerId": ""
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344e6",
+          "questionId": "5e3552a08f6122219022a1c2",
+          "question": "Do you consume alcohol regularly or more than 1-2 drinks on an occasional basis? "
+        },
+        {
+          "type": "booleanTrueInput",
+          "flagged": false,
+          "flaggedReason": "",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344e9",
+              "text": "false",
+              "additionalField": "",
+              "answerId": ""
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344e8",
+          "questionId": "5e3552a08f6122219022a1be",
+          "question": "Do you have any allergies or medication reactions?"
+        },
+        {
+          "type": "check",
+          "flagged": false,
+          "flaggedReason": "",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344eb",
+              "text": "2",
+              "additionalField": "",
+              "answerId": "5f43915c11fcc472c6f891b2"
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344ea",
+          "questionId": "5f43915c11fcc472c6f891b0",
+          "question": "Dosdfsadfasdfasd?"
+        },
+        {
+          "type": "check",
+          "flagged": true,
+          "flaggedReason": "23; ",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344ed",
+              "text": "23",
+              "additionalField": "",
+              "answerId": "5f43942f11fcc472c6f891b5"
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344ec",
+          "questionId": "5f43942f11fcc472c6f891b3",
+          "question": "Qqqqq"
+        },
+        {
+          "type": "check",
+          "flagged": false,
+          "flaggedReason": "",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344ef",
+              "text": "23",
+              "additionalField": "",
+              "answerId": "5f43949511fcc472c6f891b8"
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344ee",
+          "questionId": "5f43949511fcc472c6f891b6",
+          "question": "qqqqqqqqq"
+        },
+        {
+          "type": "check",
+          "flagged": false,
+          "flaggedReason": "",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344f1",
+              "additionalField": "",
+              "answerId": "5f439b7f11fcc472c6f891bd"
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344f0",
+          "questionId": "5f439b7411fcc472c6f891b9",
+          "question": "1qqqqqqqqqqq"
+        },
+        {
+          "type": "booleanTrueInput",
+          "flagged": false,
+          "flaggedReason": "",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344f3",
+              "text": "false",
+              "additionalField": "",
+              "answerId": ""
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344f2",
+          "questionId": "5e3552a08f6122219022a1c6",
+          "question": "Do you experience shortness of breath or chest pains during or after mild physical activity? "
+        },
+        {
+          "type": "booleanTrueInput",
+          "flagged": false,
+          "flaggedReason": "",
+          "answers": [
+            {
+              "_id": "5f9174f3759ec910bc9344f5",
+              "text": "false",
+              "additionalField": "",
+              "answerId": ""
+            }
+          ],
+          "_id": "5f9174f3759ec910bc9344f4",
+          "questionId": "5e3552a08f6122219022a1ce",
+          "question": "Do you have any other comments or questions for the doctor?"
+        }
 
-			"productType": "ed",
-			"questionnaire": [
-				{
-					"type": "text",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344cd",
-							"text": "test",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344cc",
-					"questionId": "5e3552a08f6122219022a1d5",
-					"question": "What symptoms of hair loss have you noticed?"
-				},
-				{
-					"type": "boolean",
-					"flagged": true,
-					"flaggedReason": "Answer is missing",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344cf",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344ce",
-					"questionId": "5e3552a08f6122219022a198",
-					"question": "Have you taken a blood pressure reading at a medical facility within the last 6 months?"
-				},
-				{
-					"type": "radio",
-					"flagged": true,
-					"flaggedReason": "I never have problems getting or maintaining an erection",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344d1",
-							"text": "I never have problems getting or maintaining an erection",
-							"additionalField": "",
-							"answerId": "5e3552a08f6122219022a1a0"
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344d0",
-					"questionId": "5e3552a08f6122219022a19b",
-					"question": "Do you have any problems getting or maintaining an erection during sex or masturbation?111111"
-				},
-				{
-					"type": "pressureInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344d3",
-							"text": "120/80",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344d2",
-					"questionId": "5e3552a08f6122219022a19a",
-					"question": "What was the result of your latest blood pressure reading?"
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344d5",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344d4",
-					"questionId": "5e3552a08f6122219022a1e0",
-					"question": "Do you currently take any medicines, herbals, or supplements?"
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344d7",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344d6",
-					"questionId": "5e3552a08f6122219022a1b2",
-					"question": "Do you take, or have you ever taken, prescription erectile dysfunction (ED) drugs or supplements? "
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344d9",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344d8",
-					"questionId": "5e3552a08f6122219022a1b4",
-					"question": "Have you had any sexual problems or any changes in sexual desire? "
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344db",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344da",
-					"questionId": "5e3552a08f6122219022a1b5",
-					"question": "Are you anxious, depressed or under stress? Any relationship or sexual problems with your partner? "
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344dd",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344dc",
-					"questionId": "5e3552a08f6122219022a1b7",
-					"question": "Do you have any medical conditions?"
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344df",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344de",
-					"questionId": "5e3552a08f6122219022a1b9",
-					"question": "Have you ever had any surgeries or hospitalizations? "
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344e1",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344e0",
-					"questionId": "5e3552a08f6122219022a1ba",
-					"question": "Do you take nitroglycerine, any nitrate medication, any blood pressure medication, medication for prostate enlargement, or any medication for HIV/AIDS? "
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344e3",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344e2",
-					"questionId": "5e3552a08f6122219022a1bc",
-					"question": "Do you currently take any prescription medications for a mental health condition or do you get psychological counseling?  "
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344e5",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344e4",
-					"questionId": "5e3552a08f6122219022a1c0",
-					"question": "Do you smoke or use other tobacco products? "
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344e7",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344e6",
-					"questionId": "5e3552a08f6122219022a1c2",
-					"question": "Do you consume alcohol regularly or more than 1-2 drinks on an occasional basis? "
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344e9",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344e8",
-					"questionId": "5e3552a08f6122219022a1be",
-					"question": "Do you have any allergies or medication reactions?"
-				},
-				{
-					"type": "check",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344eb",
-							"text": "2",
-							"additionalField": "",
-							"answerId": "5f43915c11fcc472c6f891b2"
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344ea",
-					"questionId": "5f43915c11fcc472c6f891b0",
-					"question": "Do?"
-				},
-				{
-					"type": "check",
-					"flagged": true,
-					"flaggedReason": "23; ",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344ed",
-							"text": "23",
-							"additionalField": "",
-							"answerId": "5f43942f11fcc472c6f891b5"
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344ec",
-					"questionId": "5f43942f11fcc472c6f891b3",
-					"question": "Qqqqq"
-				},
-				{
-					"type": "check",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344ef",
-							"text": "23",
-							"additionalField": "",
-							"answerId": "5f43949511fcc472c6f891b8"
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344ee",
-					"questionId": "5f43949511fcc472c6f891b6",
-					"question": "qqqqqqqqq"
-				},
-				{
-					"type": "check",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344f1",
-							"additionalField": "",
-							"answerId": "5f439b7f11fcc472c6f891bd"
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344f0",
-					"questionId": "5f439b7411fcc472c6f891b9",
-					"question": "1qqqqqqqqqqq"
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344f3",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344f2",
-					"questionId": "5e3552a08f6122219022a1c6",
-					"question": "Do you experience shortness of breath or chest pains during or after mild physical activity? "
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344f5",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344f4",
-					"questionId": "5e3552a08f6122219022a1ce",
-					"question": "Do you have any other comments or questions for the doctor?"
-				}
-			],
-
-			"registrationDoneDate": "2020-08-28T08:48:28.937Z",
-			"approvedDate": "2020-09-15T10:49:07.328Z",
-			"expiredAt": "2021-09-15T10:49:07.328Z",
-			"nextPeriodStart": "2020-09-15T10:49:07.328Z"
-		},
-		{
-			"plan": {
-				"frequencyOfDelivery": 1,
-				"productName": "Cialis Ea duis ex proident ipsum sint.",
-				"variationName": "Generic Cialis",
-				"frequencyOfReception": 30,
-				"firstFrequencyOfReception": 30,
-				"substance": "Tadalafil ",
-				"variationDescription": "As needed"
-			},
-			"historyId": "5f48bf93e8fec5122e55aed7",
-			"status": "active",
-			"isApproved": true,
-
-			"productType": "ed",
-			"questionnaire": [
-				{
-					"type": "text",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344cd",
-							"text": "test",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344cc",
-					"questionId": "5e3552a08f6122219022a1d5",
-					"question": "What symptoms of hair loss have you noticed?"
-				},
-				{
-					"type": "boolean",
-					"flagged": true,
-					"flaggedReason": "Answer is missing",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344cf",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344ce",
-					"questionId": "5e3552a08f6122219022a198",
-					"question": "Have you taken a blood pressure reading at a medical facility within the last 6 months?"
-				},
-				{
-					"type": "radio",
-					"flagged": true,
-					"flaggedReason": "I never have problems getting or maintaining an erection",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344d1",
-							"text": "I never have problems getting or maintaining an erection",
-							"additionalField": "",
-							"answerId": "5e3552a08f6122219022a1a0"
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344d0",
-					"questionId": "5e3552a08f6122219022a19b",
-					"question": "Do you have any problems getting or maintaining an erection during sex or masturbation?111111"
-				},
-				{
-					"type": "pressureInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344d3",
-							"text": "120/80",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344d2",
-					"questionId": "5e3552a08f6122219022a19a",
-					"question": "What was the result of your latest blood pressure reading?"
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344d5",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344d4",
-					"questionId": "5e3552a08f6122219022a1e0",
-					"question": "Do you currently take any medicines, herbals, or supplements?"
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344d7",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344d6",
-					"questionId": "5e3552a08f6122219022a1b2",
-					"question": "Do you take, or have you ever taken, prescription erectile dysfunction (ED) drugs or supplements? "
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344d9",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344d8",
-					"questionId": "5e3552a08f6122219022a1b4",
-					"question": "Have you had any sexual problems or any changes in sexual desire? "
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344db",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344da",
-					"questionId": "5e3552a08f6122219022a1b5",
-					"question": "Are you anxious, depressed or under stress? Any relationship or sexual problems with your partner? "
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344dd",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344dc",
-					"questionId": "5e3552a08f6122219022a1b7",
-					"question": "Do you have any medical conditions?"
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344df",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344de",
-					"questionId": "5e3552a08f6122219022a1b9",
-					"question": "Have you ever had any surgeries or hospitalizations? "
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344e1",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344e0",
-					"questionId": "5e3552a08f6122219022a1ba",
-					"question": "Do you take nitroglycerine, any nitrate medication, any blood pressure medication, medication for prostate enlargement, or any medication for HIV/AIDS? "
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344e3",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344e2",
-					"questionId": "5e3552a08f6122219022a1bc",
-					"question": "Do you currently take any prescription medications for a mental health condition or do you get psychological counseling?  "
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344e5",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344e4",
-					"questionId": "5e3552a08f6122219022a1c0",
-					"question": "Do you smoke or use other tobacco products? "
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344e7",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344e6",
-					"questionId": "5e3552a08f6122219022a1c2",
-					"question": "Do you consume alcohol regularly or more than 1-2 drinks on an occasional basis? "
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344e9",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344e8",
-					"questionId": "5e3552a08f6122219022a1be",
-					"question": "Do you have any allergies or medication reactions?"
-				},
-				{
-					"type": "check",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344eb",
-							"text": "2",
-							"additionalField": "",
-							"answerId": "5f43915c11fcc472c6f891b2"
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344ea",
-					"questionId": "5f43915c11fcc472c6f891b0",
-					"question": "Do?"
-				},
-				{
-					"type": "check",
-					"flagged": true,
-					"flaggedReason": "23; ",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344ed",
-							"text": "23",
-							"additionalField": "",
-							"answerId": "5f43942f11fcc472c6f891b5"
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344ec",
-					"questionId": "5f43942f11fcc472c6f891b3",
-					"question": "Qqqqq"
-				},
-				{
-					"type": "check",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344ef",
-							"text": "23",
-							"additionalField": "",
-							"answerId": "5f43949511fcc472c6f891b8"
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344ee",
-					"questionId": "5f43949511fcc472c6f891b6",
-					"question": "qqqqqqqqq"
-				},
-				{
-					"type": "check",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344f1",
-							"additionalField": "",
-							"answerId": "5f439b7f11fcc472c6f891bd"
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344f0",
-					"questionId": "5f439b7411fcc472c6f891b9",
-					"question": "1qqqqqqqqqqq"
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344f3",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344f2",
-					"questionId": "5e3552a08f6122219022a1c6",
-					"question": "Do you experience shortness of breath or chest pains during or after mild physical activity? "
-				},
-				{
-					"type": "booleanTrueInput",
-					"flagged": false,
-					"flaggedReason": "",
-					"answers": [
-						{
-							"_id": "5f9174f3759ec910bc9344f5",
-							"text": "false",
-							"additionalField": "",
-							"answerId": ""
-						}
-					],
-					"_id": "5f9174f3759ec910bc9344f4",
-					"questionId": "5e3552a08f6122219022a1ce",
-					"question": "Do you have any other comments or questions for the doctor?"
-				}
-			],
-
-			"registrationDoneDate": "2020-08-28T08:48:28.937Z",
-			"approvedDate": "2020-09-15T10:49:07.328Z",
-			"expiredAt": "2021-09-15T10:49:07.328Z",
-			"nextPeriodStart": "2020-09-15T10:49:07.328Z"
-		}
-	]
+      ],
+      "registrationDoneDate": "2020-08-28T08:48:28.937Z",
+      "approvedDate": "2020-09-15T10:49:07.328Z",
+      "expiredAt": "2021-09-15T10:49:07.328Z",
+      "nextPeriodStart": "2020-09-15T10:49:07.328Z"
+    }
+  ]
 }
