@@ -30,7 +30,7 @@ class PDFService {
 		}).format(getMonth);
 		const getDate = date.getDate();
 		const { invoiceId } = this.data;
-		this.doc.image('imeges/MENS.png', 50, marginTop + 5, { 
+		this.doc.image('images/MENS.png', 50, marginTop + 5, {
 			width: 200,
 			height: 40,
 		});

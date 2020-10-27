@@ -4,7 +4,12 @@
     <list default="true" id="b842b5db-ae3d-42e2-8ace-34ce2bfd44c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/createInvaiceMedical.js" beforeDir="false" afterPath="$PROJECT_DIR$/createInvaiceMedical.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataPdfMedical.json" beforeDir="false" afterPath="$PROJECT_DIR$/dataPdfMedical.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/createInvoicePatient.js" beforeDir="false" afterPath="$PROJECT_DIR$/createInvoicePatient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imeges/Document1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Document1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imeges/Document2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Document2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imeges/MENS.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/MENS.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imeges/face.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/face.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imeges/med.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/med.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +61,7 @@
       <workItem from="1603729586335" duration="48000" />
       <workItem from="1603785515918" duration="681000" />
       <workItem from="1603791582586" duration="12000" />
-      <workItem from="1603794622771" duration="14257000" />
+      <workItem from="1603794622771" duration="19374000" />
     </task>
     <servers />
   </component>
@@ -68,6 +73,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2663" y="298" width="424" height="491" key="FileChooserDialogImpl/74.27.1846.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603791591724" />
+    <state x="2463" y="277" width="824" height="533" key="IDE.errors.dialog" timestamp="1603809157600">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2463" y="277" width="824" height="533" key="IDE.errors.dialog/74.27.1846.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603809157600" />
     <state x="2369" y="175" width="1022" height="737" key="SettingsEditor" timestamp="1603808718697">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
