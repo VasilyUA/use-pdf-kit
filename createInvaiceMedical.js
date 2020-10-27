@@ -316,14 +316,10 @@ class PDFService {
                     align: 'right',
                 });
             this.generateHr(this.verticalLine + 100); //!Line
-            this.marginTop = 205;
+            this.marginTop = 185;
             this.doc
                 .fontSize(this.fontSize - 2)
                 .font(this.font)
-                .text('History ID:', x, this.marginTop + 5, {
-                    align: 'left',
-                    width: 100,
-                })
                 .text('Status:', x, this.marginTop + 20, {
                     align: 'left',
                 })
@@ -338,19 +334,16 @@ class PDFService {
             this.doc
                 .fontSize(this.fontSize - 2)
                 .font(this.font)
-                .text(historyId, x + 170, this.marginTop + 5, {
-                    align: 'right',
-                })
                 .text(statuse, x, this.marginTop + 20, {
                     align: 'right',
                 })
-                .text(isApproved, x, this.marginTop + 35, {
+                .text(isApproved ? "Approved" : "Declined", x, this.marginTop + 35, {
                     align: 'right',
                 })
                 .text(productType, x, this.marginTop + 50, {
                     align: 'right',
                 });
-            this.generateHr(this.verticalLine + 180); //!Line
+            this.generateHr(this.verticalLine + 160); //!Line
 
             this.doc
                 .fontSize(this.fontSize + 2)
@@ -406,8 +399,8 @@ class PDFService {
         }
     }
 
-    generategit(questionnaire) {
-        this.marginTop = 265;
+    generateQuestionnaire(questionnaire) {
+        this.marginTop = 255;
         const positions = [this.marginTop + 50];
         let index;
         let Height;
