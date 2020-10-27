@@ -371,8 +371,6 @@ class PDFService {
                         align: 'right',
                     });
         }
-
-
     }
 
     generateQuestionnaire(questionnaire) {
@@ -433,6 +431,8 @@ class PDFService {
         //Height for date subscription
         return Height;
     }
+
+    generateHistory() {}
 
     calculateHeightQuesSub(params) {
         return this.fontSize * 2 * this.lineHeight * Math.ceil(params.length / this.maxPixelWith);
