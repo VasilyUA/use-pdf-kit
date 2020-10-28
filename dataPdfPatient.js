@@ -55,8 +55,8 @@ const data = {
 		{
 			type: 'subscription',
 			name:
-				'Viagra (Generic Viagra) 1 pill 50mg.\n' +
-				'\t\t\t Use 4 times per month.\n' +
+				'Viagra (Generic Viagra) 1 pill 50mg.' +
+				'\t\t\t Use 4 times per month.' +
 				'\t\t\t Ship every 3 month.',
 			sum: 72,
 			isNegative: false,

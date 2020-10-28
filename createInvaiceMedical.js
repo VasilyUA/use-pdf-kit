@@ -176,7 +176,7 @@ class PDFService {
                 .fontSize(this.fontSize - 3)
                 .font(this.fontBold).text(`${i + 1}) ${'Note:'.slice(0, 'Note:'.length)}`, 65, positions[i])
                 .font(this.font)
-                .text(`${text.slice(0, text.length)} \n\n`, 110, positions[i], {
+                .text(`${text.slice(0, text.length)} `, 110, positions[i], {
                     width: 395,
                     align: 'justify',
                     characterSpacing: this.lineHeight - 0.1,
@@ -186,7 +186,7 @@ class PDFService {
                 `Create: ${this.getDate(createdAt)}`, 365);
 
             //Line
-            this.generateHr(positions[i + 1] - 10);
+            this.generateHr(positions[i + 1] - 18);
         }
     }
 
@@ -203,6 +203,7 @@ class PDFService {
 
             //Data
             const {
+                _id,
                 productType,
                 isApproved,
                 questionnaire,
@@ -263,13 +264,10 @@ class PDFService {
                 .text('Frequency of reception:', x, this.marginTop + 50, {
                     align: 'left',
                 })
-                .text('First frequency of reception:',x,this.marginTop + 65, {
-                        align: 'left',
-                    })
-                .text('Substance:', x, this.marginTop + 80, {
+                .text('Substance:', x, this.marginTop + 65, {
                     align: 'left',
                 })
-                .text('Variation description:', x, this.marginTop + 95, {
+                .text('Variation description:', x, this.marginTop + 80, {
                     align: 'left',
                 });
 
@@ -289,13 +287,10 @@ class PDFService {
                 .text(frequencyOfReception, x, this.marginTop + 50, {
                     align: 'right',
                 })
-                .text(firstFrequencyOfReception, x, this.marginTop + 65, {
+                .text(substance, x, this.marginTop + 65, {
                     align: 'right',
                 })
-                .text(substance, x, this.marginTop + 80, {
-                    align: 'right',
-                })
-                .text(variationDescription, x, this.marginTop + 95, {
+                .text(variationDescription, x, this.marginTop + 80, {
                     align: 'right',
                 });
 
@@ -370,6 +365,8 @@ class PDFService {
                 .text(`Next period start: ${this.getDate(nextPeriodStart)}`, x, this.marginTop + 50, {
                         align: 'right',
                     });
+
+            this.generateHistory(_id);
         }
     }
 
@@ -432,14 +429,97 @@ class PDFService {
         return Height;
     }
 
-    generateHistory() {}
+    generateHistory(id) {
+        this.marginTop = 25;
+        const x = 55;
+        const { subscriptionHistory } = this.data;
+        const { subscription, event, action, doctorName } =  subscriptionHistory.find(element => element.subscriptionId === id);
+        const {productName, variationName, frequencyOfDelivery, frequencyOfReception,substance,variationDescription} = subscription.plan;
+        this.doc.addPage();
+
+        //Generate headings subscriptions history
+        this.doc
+            .fontSize(this.fontSize + 7)
+            .font(this.fontBold)
+            .text(`Subscriptions history`, 70, this.marginTop, {
+                align: 'center',
+            });
+
+        //Line
+        this.generateHr(this.marginTop + 25);
+
+        //Generate headings history plan
+        this.doc
+            .fontSize(this.fontSize + 2)
+            .font(this.fontBold)
+            .text('Plan', 70, this.marginTop + 40, { align: 'left',})
+            .strokeColor('#000000')
+            .lineWidth(1)
+            .moveTo(50, this.marginTop + 55)
+            .lineTo(125, this.marginTop + 55)
+            .stroke();
+
+        // History plan name
+        this.doc
+            .fontSize(this.fontSize - 2)
+            .font(this.font)
+            .text('Product name:', x, this.marginTop + 65, { align: 'left', width: 100,})
+            .text('Variation name:', x, this.marginTop + 80, { align: 'left',})
+            .text('Frequency of delivery:', x, this.marginTop + 95, { align: 'left', })
+            .text('Frequency of reception:', x, this.marginTop + 110, { align: 'left',})
+            .text('Substance:', x, this.marginTop + 125, { align: 'left',})
+
+        // Plan value
+        this.doc
+            .fontSize(this.fontSize - 2)
+            .font(this.font)
+            .text(productName, x + 170, this.marginTop + 65, {
+                align: 'right',
+            })
+            .text(variationName, x, this.marginTop + 80, {
+                align: 'right',
+            })
+            .text(frequencyOfDelivery, x, this.marginTop + 95, {
+                align: 'right',
+            })
+            .text(frequencyOfReception, x, this.marginTop + 110, {
+                align: 'right',
+            })
+            .text(substance, x, this.marginTop +125 , {
+                align: 'right',
+            });
+
+        //Line
+        this.generateHr(this.marginTop + 140);
+
+        if (variationDescription !== ''){
+            const Height = this.calculateHeightVariationDescription(variationDescription);
+            console.log('value', Height);
+            this.doc
+                .fontSize(this.fontSize - 3)
+                .font(this.fontBold)
+                .text(`${'Variation description:'.slice(0, 'Variation description:'.length)}`, x, this.marginTop + 150)
+                .font(this.font)
+                .text(`${variationDescription.slice(0, variationDescription.length)} `, 175, this.marginTop + 150, {
+                    width: 345,
+                    align: 'justify',
+                    characterSpacing: this.lineHeight - 0.1,
+                    lineBreak: false,
+                    lineGap: this.lineHeight,
+                }).font(this.fontBold);
+        }
+    }
+
+    calculateHeightNotes(params) {
+        return (this.fontSize - 2) * 2 * this.lineHeight * Math.ceil(params.length / this.maxPixelWith + 1);
+    }
 
     calculateHeightQuesSub(params) {
         return this.fontSize * 2 * this.lineHeight * Math.ceil(params.length / this.maxPixelWith);
     }
 
-    calculateHeightNotes(params) {
-        return (this.fontSize - 2) * 2 * this.lineHeight * Math.ceil(params.length / this.maxPixelWith + 1);
+    calculateHeightVariationDescription(params) {
+        return this.fontSize * 2 * this.lineHeight * Math.ceil(params.length / this.maxPixelWith);
     }
 
     getDate(params) {
