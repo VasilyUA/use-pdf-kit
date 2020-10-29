@@ -347,8 +347,6 @@ class PDFService {
             const height = this.marginTop + 95
             //Generate questionnaire
             const Height = this.generateQuestionnaire(questionnaire, height);
-
-            console.log(Height)
             //Generate date
             this.marginTop = Height;
             this.doc
