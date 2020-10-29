@@ -65,7 +65,7 @@
       "deleted":false,
       "_id":"5f97dd12e8c4a65c745f500e",
       "patientId":"5f97d3ede8c4a65c745f4b8c",
-      "text":"Blabla",
+      "text":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
       "userId":"5f916bf0759ec910bc9342d3",
       "createdAt":"2020-10-27T08:40:50.416Z",
       "updatedAt":"2020-10-27T08:40:50.416Z",
@@ -493,7 +493,7 @@
           "productImgUrl":"https://static-info.s3.us-west-2.amazonaws.com/product/Viagra_1601122693277.png",
           "variationId":"5f6f3185ad0ea904cfc653d4",
           "variationName":"Generic Viagra",
-          "variationDescription": "Lorem Ipsum is simply dummy m Ipsum is simply dummy text of the printing and typesetm Ipsum is simply dummy text of the printing and typesettext of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+          "variationDescription": "",
           "weight":5,
           "measure":"mg",
           "price":30

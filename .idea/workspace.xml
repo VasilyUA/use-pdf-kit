@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/createInvaiceMedical.js" beforeDir="false" afterPath="$PROJECT_DIR$/createInvaiceMedical.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dataPdfMedical.json" beforeDir="false" afterPath="$PROJECT_DIR$/dataPdfMedical.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataPdfPatient.js" beforeDir="false" afterPath="$PROJECT_DIR$/dataPdfPatient.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +58,8 @@
       <workItem from="1603794622771" duration="19815000" />
       <workItem from="1603873659867" duration="100000" />
       <workItem from="1603880219758" duration="13548000" />
-      <workItem from="1603896588488" duration="3855000" />
+      <workItem from="1603896588488" duration="4224000" />
+      <workItem from="1603958328000" duration="15493000" />
     </task>
     <servers />
   </component>
@@ -81,20 +81,20 @@
     </state>
     <state x="2369" y="175" width="1022" height="737" key="SettingsEditor/74.27.1846.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603882479980" />
     <state x="506" y="198" width="1335" height="737" key="SettingsEditor/74.27.1846.1053/1920.0.1920.1080@74.27.1846.1053" timestamp="1603900218498" />
-    <state x="1840" y="326" width="1651" height="849" key="dock-window-1" timestamp="1603896913193">
+    <state x="2318" y="92" width="1522" height="822" key="dock-window-1" timestamp="1603958638054">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="74" y="27" width="1846" height="938" maximized="true" key="dock-window-1/74.27.1846.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603882480416" />
-    <state x="1840" y="326" width="1651" height="849" key="dock-window-1/74.27.1846.1053/1920.0.1920.1080@74.27.1846.1053" timestamp="1603896913193" />
+    <state x="2318" y="92" width="1522" height="822" key="dock-window-1/74.27.1846.1053/1920.0.1920.1080@74.27.1846.1053" timestamp="1603958638054" />
     <state x="2571" y="250" width="618" height="580" key="find.popup" timestamp="1603887693832">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2571" y="250" width="618" height="580" key="find.popup/74.27.1846.1053/1920.0.1920.1080@74.27.1846.1053" timestamp="1603887693832" />
-    <state x="674" y="266" key="run.anything.popup" timestamp="1603889661421">
+    <state x="674" y="266" key="run.anything.popup" timestamp="1603962714726">
       <screen x="74" y="27" width="1846" height="1053" />
     </state>
     <state x="2544" y="245" key="run.anything.popup/74.27.1846.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603808150401" />
-    <state x="674" y="266" key="run.anything.popup/74.27.1846.1053/1920.0.1920.1080@74.27.1846.1053" timestamp="1603889661421" />
+    <state x="674" y="266" key="run.anything.popup/74.27.1846.1053/1920.0.1920.1080@74.27.1846.1053" timestamp="1603962714726" />
     <state x="2543" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1603882779048">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

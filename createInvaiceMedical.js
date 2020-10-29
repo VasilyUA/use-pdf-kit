@@ -163,7 +163,7 @@ class PDFService {
             const {text, createdAt} = this.data.notes[i];
 
             //calculateHeight
-            const rowHeight = this.calculateHeightNotes(text);
+            const rowHeight = this.calculateHeight(text, this.fontSize -  2);
             positions.push(Math.round(rowHeight) + positions[i]);
             if (positions[i] > this.totalHeight) {
                 this.doc.addPage();
@@ -174,9 +174,9 @@ class PDFService {
             //Data notes
             this.doc
                 .fontSize(this.fontSize - 3)
-                .font(this.fontBold).text(`${i + 1}) ${'Note:'.slice(0, 'Note:'.length)}`, 65, positions[i])
+                .font(this.fontBold).text(`${i + 1})  ${'Note:'.slice(0, 'Note:'.length)}`, 65, positions[i])
                 .font(this.font)
-                .text(`${text.slice(0, text.length)} `, 110, positions[i], {
+                .text(`${text.slice(0, text.length)} `, 115, positions[i], {
                     width: 395,
                     align: 'justify',
                     characterSpacing: this.lineHeight - 0.1,
@@ -213,7 +213,6 @@ class PDFService {
                     variationName,
                     frequencyOfDelivery,
                     frequencyOfReception,
-                    firstFrequencyOfReception,
                     substance,
                     variationDescription,
                 },
@@ -267,9 +266,6 @@ class PDFService {
                 .text('Substance:', x, this.marginTop + 65, {
                     align: 'left',
                 })
-                .text('Variation description:', x, this.marginTop + 80, {
-                    align: 'left',
-                });
 
             // Plan value
             this.doc
@@ -290,15 +286,18 @@ class PDFService {
                 .text(substance, x, this.marginTop + 65, {
                     align: 'right',
                 })
-                .text(variationDescription, x, this.marginTop + 80, {
-                    align: 'right',
-                });
 
             //!Line
-            this.generateHr(this.verticalLine + 100);
+            this.generateHr(this.verticalLine + 60);
+
+            //Calculate variation description
+            this.marginTop = 155
+
+            //Generate variation description
+            this.generateVariationDescription(variationDescription);
 
             //Status subscription
-            this.marginTop = 185;
+            this.marginTop = variationDescription === "" ? this.marginTop - 10 : this.marginTop - 35;
 
             //Status Name
             this.doc
@@ -322,7 +321,7 @@ class PDFService {
                 .text(statuses, x, this.marginTop + 20, {
                     align: 'right',
                 })
-                .text(isApproved ? "Approved" : "Declined", x, this.marginTop + 35, {
+                .text(isApproved ? `Approved date: ${this.getDate(approvedDate)}` : "Declined", x, this.marginTop + 35, {
                     align: 'right',
                 })
                 .text(productType, x, this.marginTop + 50, {
@@ -330,7 +329,7 @@ class PDFService {
                 });
 
             //!Line
-            this.generateHr(this.verticalLine + 160);
+            this.generateHr(this.marginTop + 70);
 
             //Generate headings questionnaire
             this.doc
@@ -345,24 +344,23 @@ class PDFService {
                 .lineTo(190, this.marginTop + 95)
                 .stroke();
 
+            const height = this.marginTop + 95
             //Generate questionnaire
-            const Height = this.generateQuestionnaire(questionnaire);
+            const Height = this.generateQuestionnaire(questionnaire, height);
 
+            console.log(Height)
             //Generate date
-            this.marginTop = Height + 30;
+            this.marginTop = Height;
             this.doc
                 .fontSize(this.fontSize - 2)
                 .font(this.font)
                 .text(`Registration done date: ${this.getDate(
                         registrationDoneDate
                     )}`, x + 170, this.marginTop + 5, { align: 'right', })
-                .text(`Approved date: ${this.getDate(approvedDate)}`, x, this.marginTop + 20, {
+                .text(`ExpiredAt ${this.getDate(expiredAt)}`, x, this.marginTop + 20, {
                         align: 'right',
                     })
-                .text(`ExpiredAt ${this.getDate(expiredAt)}`, x, this.marginTop + 35, {
-                        align: 'right',
-                    })
-                .text(`Next period start: ${this.getDate(nextPeriodStart)}`, x, this.marginTop + 50, {
+                .text(`Next period start: ${this.getDate(nextPeriodStart)}`, x, this.marginTop + 35, {
                         align: 'right',
                     });
 
@@ -370,10 +368,10 @@ class PDFService {
         }
     }
 
-    generateQuestionnaire(questionnaire) {
+    generateQuestionnaire(questionnaire, height) {
         let index;
         let Height;
-        this.marginTop = 245;
+        this.marginTop = height - 30;
         const positions = [this.marginTop + 50];
 
         //Generate questionnaire
@@ -386,12 +384,12 @@ class PDFService {
 
             //Calculate height
             const rowHeight = Math.max(
-                this.calculateHeightQuesSub(question),
-                this.calculateHeightQuesSub(answer)
+                this.calculateHeight(question, this.fontSize),
+                this.calculateHeight(answer, this.fontSize)
             );
             positions.push(positions[index] + (rowHeight * 1.2));
             if (positions[index] > this.totalHeight) {
-                positions[index] = 50;
+                positions[index] = 50; // start position from new page
                 positions[index + 1] = positions[index] + rowHeight + 5;
                 this.doc.addPage();
             }
@@ -399,11 +397,10 @@ class PDFService {
             //Question
             this.doc
                 .fontSize(this.fontSize - 2).font(this.font).text(`${index + 1})`, 50, positions[index])
-                .font(this.fontBold).text(`${'Question:'.slice(0, 'Question:'.length)}`, 75, positions[index])
                 .font(this.font)
-                .text(`${question}`, 140, positions[index], {
+                .text(`${question}`, 70, positions[index], {
                         align: 'justify',
-                        width: 365,
+                        width: 445,
                     });
 
             //Calculate height for answer
@@ -412,14 +409,14 @@ class PDFService {
             // Answer
             this.doc
                 .font(this.fontBold)
-                .text(`${'Answer:'.slice(0, 'Answer:'.length)}`, 75, rowHeight > 28 ? maxHeight : positions[index] + 15).font(this.font)
-                .text(`${answer === "false" ? "No" : answer}`, 140, rowHeight > 28 ? maxHeight : positions[index] + 15, {
+                .text(`${'Answer:'.slice(0, 'Answer:'.length)}`, 75, rowHeight > 28 ? maxHeight : positions[index] + 17).font(this.font)
+                .text(`${answer === "false" ? "No" : answer}`, 140, rowHeight > 28 ? maxHeight : positions[index] + 17, {
                     align: 'justify',
                     width: 365,
                 });
 
             //!Line
-            this.generateHr(positions[index + 1] - 4);
+            // this.generateHr(positions[index + 1] - 4);
 
             //Height for date subscription
             Height = positions[index + 1] - 4;
@@ -433,10 +430,13 @@ class PDFService {
         this.marginTop = 25;
         const x = 55;
         const { subscriptionHistory } = this.data;
-        const { subscription, event, action, doctorName } =  subscriptionHistory.find(element => element.subscriptionId === id);
-        const {productName, variationName, frequencyOfDelivery, frequencyOfReception,substance,variationDescription} = subscription.plan;
-        this.doc.addPage();
+        const history = subscriptionHistory.find(element => element.subscriptionId === id);
+        if (!history) return;
+        const { subscription, event, action,  } = history;
+        const {plan:{productName, variationName, frequencyOfDelivery, frequencyOfReception,substance,variationDescription}, isApproved, status, productType, questionnaire, registrationDoneDate, approvedDate, expiredAt, nextPeriodStart} = subscription;
 
+        if (action === "approved"){
+        this.doc.addPage();
         //Generate headings subscriptions history
         this.doc
             .fontSize(this.fontSize + 7)
@@ -490,36 +490,109 @@ class PDFService {
             });
 
         //Line
-        this.generateHr(this.marginTop + 140);
+        this.generateHr(this.marginTop + 145);
 
+        this.marginTop = 165;
+
+        //Generate variation description
+        this.generateVariationDescription(variationDescription)
+
+
+        //Status Name
+        this.doc
+            .fontSize(this.fontSize - 2)
+            .font(this.font)
+            .text('Status:', x, this.marginTop + 20, {
+                align: 'left',
+            })
+            .text('Is approved:', x, this.marginTop + 35, {
+                align: 'left',
+            })
+            .text('Product type:', x, this.marginTop + 50, {
+                align: 'left',
+            });
+        let statuses = status[0].toUpperCase() + status.slice(1);
+
+        //Status value
+        this.doc
+            .fontSize(this.fontSize - 2)
+            .font(this.font)
+            .text(statuses, x, this.marginTop + 20, {
+                align: 'right',
+            })
+            .text(isApproved ? `Approved date: ${this.getDate(approvedDate)}` : "Declined", x, this.marginTop + 35, {
+                align: 'right',
+            })
+            .text(productType, x, this.marginTop + 50, {
+                align: 'right',
+            });
+
+        let heightDateEnd = this.marginTop + 50;
+
+        if (event === "renewal"){
+            //!Line
+            this.generateHr(this.marginTop + 67);
+
+            //Generate headings questionnaire
+            this.doc
+                .fontSize(this.fontSize + 2)
+                .font(this.fontBold)
+                .text('Questionnaire', 70, this.marginTop + 80, {
+                    align: 'left',
+                })
+                .strokeColor('#000000')
+                .lineWidth(1)
+                .moveTo(55, this.marginTop + 95)
+                .lineTo(190, this.marginTop + 95)
+                .stroke();
+
+            const height = this.marginTop + 95
+            //Generate questionnaire
+            heightDateEnd =  this.generateQuestionnaire(questionnaire, height);
+            }
+            //Generate date
+            this.marginTop = heightDateEnd + 30;
+            this.doc
+                .fontSize(this.fontSize - 2)
+                .font(this.font)
+                .text(`Registration done date: ${this.getDate(
+                    registrationDoneDate
+                )}`, x + 170, this.marginTop + 5, { align: 'right', })
+                .text(`ExpiredAt ${this.getDate(expiredAt)}`, x, this.marginTop + 20, {
+                    align: 'right',
+                })
+                .text(`Next period start: ${this.getDate(nextPeriodStart)}`, x, this.marginTop + 35, {
+                    align: 'right',
+                });
+        }
+    }
+
+    generateVariationDescription(variationDescription){
+        const nextHeight = this.calculateHeight(variationDescription, this.fontSize - 3);
+
+        //Generate variation description
         if (variationDescription !== ''){
-            const Height = this.calculateHeightVariationDescription(variationDescription);
-            console.log('value', Height);
             this.doc
                 .fontSize(this.fontSize - 3)
                 .font(this.fontBold)
-                .text(`${'Variation description:'.slice(0, 'Variation description:'.length)}`, x, this.marginTop + 150)
+                .text(`${'Variation description:'.slice(0, 'Variation description:'.length)}`, 55, this.marginTop + 10)
                 .font(this.font)
-                .text(`${variationDescription.slice(0, variationDescription.length)} `, 175, this.marginTop + 150, {
+                .text(`${variationDescription.slice(0, variationDescription.length)} `, 175, this.marginTop + 10, {
                     width: 345,
                     align: 'justify',
                     characterSpacing: this.lineHeight - 0.1,
                     lineBreak: false,
                     lineGap: this.lineHeight,
                 }).font(this.fontBold);
+
+            this.marginTop = this.marginTop + nextHeight;
+            //Line
+            this.generateHr(this.marginTop - 20);
         }
     }
 
-    calculateHeightNotes(params) {
-        return (this.fontSize - 2) * 2 * this.lineHeight * Math.ceil(params.length / this.maxPixelWith + 1);
-    }
-
-    calculateHeightQuesSub(params) {
-        return this.fontSize * 2 * this.lineHeight * Math.ceil(params.length / this.maxPixelWith);
-    }
-
-    calculateHeightVariationDescription(params) {
-        return this.fontSize * 2 * this.lineHeight * Math.ceil(params.length / this.maxPixelWith);
+    calculateHeight(params, fontSize){
+        return fontSize * 2 * this.lineHeight * Math.ceil(params.length / this.maxPixelWith + 1);
     }
 
     getDate(params) {
