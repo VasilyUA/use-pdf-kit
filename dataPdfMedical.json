@@ -86,7 +86,7 @@
         "productImgUrl":"https://static-info.s3.us-west-2.amazonaws.com/product/Viagra_1601122693277.png",
         "variationId":"5f6f3185ad0ea904cfc653d4",
         "variationName":"Generic Viagra",
-        "variationDescription":"asd",
+        "variationDescription":"ADD",
         "weight":5,
         "measure":"mg",
         "price":60
@@ -130,13 +130,41 @@
           "answers":[
             {
               "_id":"5f97d473e8c4a65c745f4d63",
-              "text":"I dont know",
+              "text":"I lorem know",
+              "additionalField":"",
+              "answerId":""
+            },
+            {
+              "_id":"5f97d473e8c4a65c745f4d63",
+              "text":"I ipsum know",
               "additionalField":"",
               "answerId":""
             }
           ],
           "questionId":"5e3552a08f6122219022a1d5",
-          "question":"What symptoms of hair loss have you noticed?"
+          "question":"What symptoms of hairat symptoms of hair at symptoms of hair  loss have you noticed?"
+        },
+        {
+          "type":"boolean",
+          "flagged":false,
+          "flaggedReason":"",
+          "_id":"5f97d473e8c4a65c745f4d62",
+          "answers":[
+            {
+              "_id":"5f97d473e8c4a65c745f4d63",
+              "text":"I dont know",
+              "additionalField":"",
+              "answerId":""
+            },
+            {
+              "_id":"5f97d473e8c4a65c745f4d63",
+              "text":"I ipsum k symptoms of hair loss have toms now",
+              "additionalField":"",
+              "answerId":""
+            }
+          ],
+          "questionId":"5e3552a08f6122219022a1d5",
+          "question":"What symptoms of hair loss have toms of hair loss have toms of hair loss have toms of hair loss have you noticed?"
         },
         {
           "type":"boolean",
@@ -400,6 +428,12 @@
           "flaggedReason":"",
           "_id":"5f97d473e8c4a65c745f4d84",
           "answers":[
+            {
+              "_id":"5f97d473e8c4a65c745f4d85",
+              "text":"12",
+              "additionalField":"",
+              "answerId":"5f43949511fcc472c6f891b7"
+            },
             {
               "_id":"5f97d473e8c4a65c745f4d85",
               "text":"12",

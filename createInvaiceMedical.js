@@ -296,8 +296,8 @@ class PDFService {
             //Generate variation description
             this.generateVariationDescription(variationDescription);
 
-            //Status subscription
-            this.marginTop = variationDescription === "" ? this.marginTop - 10 : this.marginTop - 35;
+            //Margin top status subscription
+            this.marginTop = variationDescription === "" ? this.marginTop - 10 : this.marginTop - 27;
 
             //Status Name
             this.doc
@@ -312,9 +312,9 @@ class PDFService {
                 .text('Product type:', x, this.marginTop + 50, {
                     align: 'left',
                 });
-            let statuses = status[0].toUpperCase() + status.slice(1);
 
             //Status value
+            let statuses = status[0].toUpperCase() + status.slice(1);
             this.doc
                 .fontSize(this.fontSize - 2)
                 .font(this.font)
@@ -345,8 +345,10 @@ class PDFService {
                 .stroke();
 
             const height = this.marginTop + 95
+
             //Generate questionnaire
             const Height = this.generateQuestionnaire(questionnaire, height);
+
             //Generate date
             this.marginTop = Height;
             this.doc
@@ -364,64 +366,6 @@ class PDFService {
 
             this.generateHistory(_id);
         }
-    }
-
-    generateQuestionnaire(questionnaire, height) {
-        let index;
-        let Height;
-        this.marginTop = height - 30;
-        const positions = [this.marginTop + 50];
-
-        //Generate questionnaire
-        for (index = 0; index < questionnaire.length; index++) {
-            //Data
-            const {question, answers} = questionnaire[index];
-
-            //Valid is there a field!
-            const answer = answers[0].text ? answers[0].text : 'Not found';
-
-            //Calculate height
-            const rowHeight = Math.max(
-                this.calculateHeight(question, this.fontSize),
-                this.calculateHeight(answer, this.fontSize)
-            );
-            positions.push(positions[index] + (rowHeight * 1.2));
-            if (positions[index] > this.totalHeight) {
-                positions[index] = 50; // start position from new page
-                positions[index + 1] = positions[index] + rowHeight + 5;
-                this.doc.addPage();
-            }
-
-            //Question
-            this.doc
-                .fontSize(this.fontSize - 2).font(this.font).text(`${index + 1})`, 50, positions[index])
-                .font(this.font)
-                .text(`${question}`, 70, positions[index], {
-                        align: 'justify',
-                        width: 445,
-                    });
-
-            //Calculate height for answer
-            const maxHeight = positions[index] + (rowHeight / 1.7);
-
-            // Answer
-            this.doc
-                .font(this.fontBold)
-                .text(`${'Answer:'.slice(0, 'Answer:'.length)}`, 75, rowHeight > 28 ? maxHeight : positions[index] + 17).font(this.font)
-                .text(`${answer === "false" ? "No" : answer}`, 140, rowHeight > 28 ? maxHeight : positions[index] + 17, {
-                    align: 'justify',
-                    width: 365,
-                });
-
-            //!Line
-            // this.generateHr(positions[index + 1] - 4);
-
-            //Height for date subscription
-            Height = positions[index + 1] - 4;
-        }
-
-        //Height for date subscription
-        return Height;
     }
 
     generateHistory(id) {
@@ -565,6 +509,49 @@ class PDFService {
         }
     }
 
+    generateQuestionnaire(questionnaire, height) {
+        let index;
+        let nextHeightDate;
+        this.marginTop = height;
+        const positions = [this.marginTop + 10];
+
+        //Generate questionnaire
+        for (index = 0; index < questionnaire.length; index++) {
+            const {question, answers} = questionnaire[index];
+            //Calculate height
+            const rowHeight = this.calculateHeight(question, this.fontSize)
+            positions.push(positions[index] + rowHeight);
+
+            if (positions[index] > this.totalHeight) {
+                positions[index] = 50; // start position from new page
+                positions[index + 1] = positions[index] + rowHeight + 5;
+                this.doc.addPage();
+            }
+
+            //Question
+            this.doc
+                .fontSize(this.fontSize - 2).font(this.font).text(`${index + 1})`, 50, positions[index])
+                .font(this.font)
+                .text(`${question}`, 70, positions[index], {
+                    align: 'justify',
+                    width: 445,
+                });
+
+            //Calculate height for answer
+            const maxHeight = positions[index] + 30;
+
+            // Answer
+            const nextHeightQuestion = this.generateAnswer(answers, maxHeight);
+            positions[index + 1] = nextHeightQuestion + 10;
+
+            //Height for date subscription
+            nextHeightDate = positions[index + 1];
+        }
+
+        //Height for date subscription
+        return nextHeightDate;
+    }
+
     generateVariationDescription(variationDescription){
         const nextHeight = this.calculateHeight(variationDescription, this.fontSize - 3);
 
@@ -585,8 +572,32 @@ class PDFService {
 
             this.marginTop = this.marginTop + nextHeight;
             //Line
-            this.generateHr(this.marginTop - 20);
+            this.generateHr(this.marginTop - 15);
         }
+    }
+
+    generateAnswer(answers, height){
+        let i;
+        this.marginTop = height;
+        const positions = [this.marginTop];
+        let Height;
+
+        for (i = 0; i < answers.length; i++) {
+                //Validate text
+                const answer = answers[i].text ? answers[i].text : 'Not found';
+
+                const rowHeight = this.calculateHeight(answer, this.fontSize - 3);
+                positions.push(positions[i] + (rowHeight - 23));
+                this.doc
+                    .font(this.fontBold)
+                    .text(`${'Answer:'.slice(0, 'Answer:'.length)}`, 75, positions[i]).font(this.font)
+                    .text(`${answer === "false" ? "No" : answer}`, 130, positions[i], {
+                        align: 'justify',
+                        width: 365,
+                    });
+                Height = positions[i + 1]
+        }
+        return Height;
     }
 
     calculateHeight(params, fontSize){
