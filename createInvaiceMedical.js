@@ -367,16 +367,15 @@ class PDFService {
     }
 
     generateHistory(id) {
-        this.marginTop = 25;
-        const x = 55;
-        const { subscriptionHistory } = this.data;
-        const history = subscriptionHistory.find(element => element.subscriptionId === id);
-        if (!history) return;
-        const { subscription, event, action,  } = history;
-        const {plan:{productName, variationName, frequencyOfDelivery, frequencyOfReception,substance,variationDescription}, isApproved, status, productType, questionnaire, registrationDoneDate, approvedDate, expiredAt, nextPeriodStart} = subscription;
-
-        if (action === "approved"){
-        this.doc.addPage();
+        let i;
+        for (i = 0; i < this.data.subscriptionHistory.length; i++){
+            this.marginTop = 25;
+            const x = 55;
+            const { subscription, event, action,  subscriptionId} = this.data.subscriptionHistory[i];
+            if (subscriptionId !== id) return
+            const {plan:{productName, variationName, frequencyOfDelivery, frequencyOfReception,substance,variationDescription}, isApproved, status, productType, questionnaire, registrationDoneDate, approvedDate, expiredAt, nextPeriodStart} = subscription;
+            if (action === "approved"){
+            this.doc.addPage();
         //Generate headings subscriptions history
         this.doc
             .fontSize(this.fontSize + 7)
@@ -513,6 +512,7 @@ class PDFService {
                 .text(`Next period start: ${this.getDate(nextPeriodStart)}`, x, this.marginTop + 35, {
                     align: 'right',
                 });
+            }
         }
     }
 
