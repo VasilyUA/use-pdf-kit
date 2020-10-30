@@ -140,6 +140,7 @@ class PDFService {
     }
 
     generateNotes() {
+        if (this.data.notes.length === 0) return;
         let i;
         this.marginTop = 25;
         this.verticalLine = this.marginTop + 19;
@@ -434,8 +435,10 @@ class PDFService {
         this.marginTop = 165;
 
         //Generate variation description
-        this.generateVariationDescription(variationDescription)
+        this.generateVariationDescription(variationDescription);
 
+        //Margin top all status
+        this.marginTop = this.marginTop - 20
 
         //Status Name
         this.doc
@@ -449,14 +452,16 @@ class PDFService {
             })
             .text('Product type:', x, this.marginTop + 50, {
                 align: 'left',
+            })
+            .text('Event:', x, this.marginTop + 65, {
+                align: 'left',
             });
-        let statuses = status[0].toUpperCase() + status.slice(1);
 
         //Status value
         this.doc
             .fontSize(this.fontSize - 2)
             .font(this.font)
-            .text(statuses, x, this.marginTop + 20, {
+            .text(status[0].toUpperCase() + status.slice(1), x, this.marginTop + 20, {
                 align: 'right',
             })
             .text(isApproved ? `Approved date: ${this.getDate(approvedDate)}` : "Declined", x, this.marginTop + 35, {
@@ -464,28 +469,33 @@ class PDFService {
             })
             .text(productType, x, this.marginTop + 50, {
                 align: 'right',
+            })
+            .text(event[0].toUpperCase() + event.slice(1), x, this.marginTop + 65, {
+                align: 'right',
             });
 
         let heightDateEnd = this.marginTop + 50;
 
         if (event === "renewal"){
+            //Margin top all questionnaire
+            const marginTop = 10;
             //!Line
-            this.generateHr(this.marginTop + 67);
+            this.generateHr(this.marginTop + (marginTop + 70));
 
             //Generate headings questionnaire
             this.doc
                 .fontSize(this.fontSize + 2)
                 .font(this.fontBold)
-                .text('Questionnaire', 70, this.marginTop + 80, {
+                .text('Questionnaire', 70, this.marginTop + (marginTop + 80), {
                     align: 'left',
                 })
                 .strokeColor('#000000')
                 .lineWidth(1)
-                .moveTo(55, this.marginTop + 95)
-                .lineTo(190, this.marginTop + 95)
+                .moveTo(55, this.marginTop + (marginTop +97))
+                .lineTo(190, this.marginTop + (marginTop +97))
                 .stroke();
 
-            const height = this.marginTop + 95
+            const height = this.marginTop + (marginTop + 105)
             //Generate questionnaire
             heightDateEnd =  this.generateQuestionnaire(questionnaire, height);
             }
