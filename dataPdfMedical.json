@@ -71,6 +71,39 @@
       "updatedAt":"2020-10-27T08:40:50.416Z",
       "__v":0,
       "id":"5f97dd12e8c4a65c745f500e"
+    }, {
+      "type":"office",
+      "deleted":false,
+      "_id":"5f97dd12e8c4a65c745f500e",
+      "patientId":"5f97d3ede8c4a65c745f4b8c",
+      "text":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+      "userId":"5f916bf0759ec910bc9342d3",
+      "createdAt":"2020-10-27T08:40:50.416Z",
+      "updatedAt":"2020-10-27T08:40:50.416Z",
+      "__v":0,
+      "id":"5f97dd12e8c4a65c745f500e"
+    }, {
+      "type":"office",
+      "deleted":false,
+      "_id":"5f97dd12e8c4a65c745f500e",
+      "patientId":"5f97d3ede8c4a65c745f4b8c",
+      "text":"Lorem tting industry.",
+      "userId":"5f916bf0759ec910bc9342d3",
+      "createdAt":"2020-10-27T08:40:50.416Z",
+      "updatedAt":"2020-10-27T08:40:50.416Z",
+      "__v":0,
+      "id":"5f97dd12e8c4a65c745f500e"
+    }, {
+      "type":"office",
+      "deleted":false,
+      "_id":"5f97dd12e8c4a65c745f500e",
+      "patientId":"5f97d3ede8c4a65c745f4b8c",
+      "text":"Lorem simply dummy text of the printing and typesetting simply dummy text of the printing and typesetting ",
+      "userId":"5f916bf0759ec910bc9342d3",
+      "createdAt":"2020-10-27T08:40:50.416Z",
+      "updatedAt":"2020-10-27T08:40:50.416Z",
+      "__v":0,
+      "id":"5f97dd12e8c4a65c745f500e"
     }
   ],
   "subscriptions":[
@@ -123,20 +156,14 @@
       "productType":"ed",
       "questionnaire":[
         {
-          "type":"boolean",
+          "type":"image",
           "flagged":false,
           "flaggedReason":"",
           "_id":"5f97d473e8c4a65c745f4d62",
           "answers":[
             {
               "_id":"5f97d473e8c4a65c745f4d63",
-              "text":"I lorem know",
-              "additionalField":"",
-              "answerId":""
-            },
-            {
-              "_id":"5f97d473e8c4a65c745f4d63",
-              "text":"I ipsum know",
+              "text":"images/med.jpg",
               "additionalField":"",
               "answerId":""
             }
@@ -152,13 +179,13 @@
           "answers":[
             {
               "_id":"5f97d473e8c4a65c745f4d63",
-              "text":"I dont know",
+              "text":"I dont kt symptoms of hair loss have toms of hair loss have t symptoms of hair loss have toms of hair loss have t symptoms of hair loss have toms of hair loss have now",
               "additionalField":"",
               "answerId":""
             },
             {
               "_id":"5f97d473e8c4a65c745f4d63",
-              "text":"I ipsum k symptoms of hair loss have toms now",
+              "text":"I ipsum k sympt symptoms of hair loss have toms of hair loss have toms of hair loss have toms now",
               "additionalField":"",
               "answerId":""
             }
@@ -839,7 +866,7 @@
         }
       },
       "subscriptionId":"5f97d3ede8c4a65c745f4b8d",
-      "event":"change_plan",
+      "event":"renewal",
       "action":"approved",
       "createdAt":"2020-10-27T10:03:26.076Z",
       "updatedAt":"2020-10-27T10:03:26.076Z",
