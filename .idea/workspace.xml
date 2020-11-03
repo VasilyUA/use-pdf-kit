@@ -4,7 +4,6 @@
     <list default="true" id="b842b5db-ae3d-42e2-8ace-34ce2bfd44c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/createInvaiceMedical.js" beforeDir="false" afterPath="$PROJECT_DIR$/createInvaiceMedical.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataPdfMedical.json" beforeDir="false" afterPath="$PROJECT_DIR$/dataPdfMedical.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +26,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.19.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.19.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mens.be" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -62,7 +61,8 @@
       <workItem from="1603958328000" duration="15666000" />
       <workItem from="1603975324940" duration="49000" />
       <workItem from="1603978259482" duration="9268000" />
-      <workItem from="1604044633729" duration="12966000" />
+      <workItem from="1604044633729" duration="13073000" />
+      <workItem from="1604058820390" duration="7046000" />
     </task>
     <servers />
   </component>
@@ -70,11 +70,11 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="788" y="318" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604051540858">
+    <state x="788" y="318" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604058509197">
       <screen x="74" y="27" width="1846" height="1053" />
     </state>
     <state x="2663" y="298" width="424" height="491" key="FileChooserDialogImpl/74.27.1846.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603881171716" />
-    <state x="788" y="318" width="424" height="491" key="FileChooserDialogImpl/74.27.1846.1053/1920.0.1920.1080@74.27.1846.1053" timestamp="1604051540858" />
+    <state x="788" y="318" width="424" height="491" key="FileChooserDialogImpl/74.27.1846.1053/1920.0.1920.1080@74.27.1846.1053" timestamp="1604058509197" />
     <state x="2463" y="277" width="824" height="533" key="IDE.errors.dialog" timestamp="1603809157600">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

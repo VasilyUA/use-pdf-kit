@@ -24,7 +24,6 @@ class PDFService {
 
     generateHeader() {
         const date = new Date();
-
         //Header
         this.doc.image('images/MENS.png', 50, this.marginTop, {
             width: 150,
